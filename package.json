@@ -1,0 +1,13 @@
+{
+  "name": "google-sites-archive",
+  "version": "1.0.0",
+  "description": "Google Sites takeout deployed on Vercel",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {},
+  "main": "build.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
