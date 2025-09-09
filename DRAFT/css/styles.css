@@ -754,10 +754,10 @@ footer {
     background: rgba(255,255,255,0.2);
 }
 
-.social-links img {
+.social-links svg {
     width: 24px;
     height: 24px;
-    filter: brightness(0) invert(1);
+    color: white;
 }
 
 /* Divider */
