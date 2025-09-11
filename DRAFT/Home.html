@@ -10,6 +10,7 @@
     
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -18,22 +19,22 @@
     <nav class="main-nav">
         <div class="nav-container">
             <a href="Home.html" class="logo">Street Medicine at Pitt</a>
-            <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <ul id="navMenu">
-                <li>
-                    <a href="Home.html">Home</a>
+                <li class="has-submenu">
+                    <a href="Home.html" class="active">Home</a>
                     <ul class="submenu">
-                        <li><a href="About us.html">About us</a></li>
+                        <li><a href="About us.html">About Us</a></li>
                         <li><a href="Resources.html">Resources</a></li>
                         <li><a href="News.html">News</a></li>
                     </ul>
                 </li>
                 <li><a href="Donate.html">Donate</a></li>
-                <li>
+                <li class="has-submenu">
                     <a href="Volunteer.html">Volunteer</a>
                     <ul class="submenu">
                         <li><a href="Street Rounds.html">Street Rounds</a></li>
@@ -74,8 +75,8 @@
             <!-- CTA Buttons -->
             <div class="cta-buttons">
                 <a href="#mission" class="btn btn-primary">Learn More</a>
-                <a href="donate.html" class="btn btn-secondary">Donate</a>
-                <a href="volunteer.html" class="btn btn-tertiary">Get Involved</a>
+                <a href="Donate.html" class="btn btn-secondary">Donate</a>
+                <a href="Volunteer.html" class="btn btn-tertiary">Get Involved</a>
             </div>
         </div>
         
@@ -103,22 +104,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Gallery Section
-    <section class="gallery-section">
-        <div class="container">
-            <div class="slideshow">
-                <img src="https://drive.google.com/thumbnail?id=1xhYfwPTNanGgx1rheO1yiAJk2DgEP6k2&sz=w1600" alt="Team Photo 1">
-                <img src="https://drive.google.com/thumbnail?id=1qMUwzDFUpVGAnfiZAdS82aISGqgH-wNf&sz=w1600" alt="Team Photo 2">
-                <img src="https://drive.google.com/thumbnail?id=1oXQah37gi7LE9PPban1lK3fvI0zAOtEJ&sz=w1600" alt="Team Photo 3">
-                <img src="https://drive.google.com/thumbnail?id=1oiUS29nzXSiW_ejDaXYVljIvOIgEjIlf&sz=w1600" alt="Team Photo 4">
-                <img src="https://drive.google.com/thumbnail?id=1q6GpmsjwArAy2ix4sfu0UTXOCIxjb9uE&sz=w1600" alt="Team Photo 5">
-                <img src="https://drive.google.com/thumbnail?id=1SRLN9jMOm1QBl4UdBgMhflGAZrZMdUT1&sz=w1600" alt="Team Photo 6">
-                <img src="https://drive.google.com/thumbnail?id=1bNnSd73Ti5bQvnocA8QGx32moM-3YiM6&sz=w1600" alt="Team Photo 7">
-                <img src="https://drive.google.com/thumbnail?id=13MD_aFy2-CWP44qjvziLgZNVF1GYdOZ-&sz=w1600" alt="Team Photo 8">
-            </div>
-        </div>
-    </section> -->
 
     <div class="section-divider"></div>
 
@@ -291,13 +276,12 @@
             <div class="involvement-grid">
                 <div class="involvement-card">
                     <img src="Home/team.jpg" alt="Volunteering">
-                    <h3><a href="Get Involved.html">Volunteering</a></h3>
+                    <h3><a href="Volunteer.html">Volunteering</a></h3>
                     <p>Join our team of dedicated volunteers making a difference in the community.</p>
                 </div>
                 <div class="involvement-card">
                     <img src="Home/event.jpg" alt="Events">
-                    <!-- need to add the events page & link -->
-                    <h3>Events</h3> 
+                    <h3><a href="Events.html">Events</a></h3>
                     <p>Participate in our community events and fundraisers throughout the year.</p>
                 </div>
                 <div class="involvement-card">
@@ -321,26 +305,26 @@
                     <h3>Health Outcomes in Street Medicine</h3>
                     <p class="news-summary">Analyzing patient health outcomes through longitudinal street medicine data collection.</p>
                     <p class="news-meta">PI: Dr. Alex Johnson</p>
-                    <a href="#" class="news-btn">Read More</a>
+                    <a href="News.html" class="news-btn">Read More</a>
                 </div>
                 <div class="news-card">
                     <div class="news-icon">📱</div>
                     <h3>Mobile Health Tech in Outreach</h3>
                     <p class="news-summary">Integrating mobile health technologies for enhanced patient engagement in street care.</p>
                     <p class="news-meta">PI: Dr. Sarah Lee</p>
-                    <a href="#" class="news-btn">Read More</a>
+                    <a href="News.html" class="news-btn">Read More</a>
                 </div>
                 <div class="news-card">
                     <div class="news-icon">🧠</div>
                     <h3>Mental Health Screening in Street Medicine</h3>
                     <p class="news-summary">Evaluation of brief mental health screening tools adapted for street-based clinical encounters.</p>
                     <p class="news-meta">PI: Dr. Lisa Martinez</p>
-                    <a href="#" class="news-btn">Read More</a>
+                    <a href="News.html" class="news-btn">Read More</a>
                 </div>
             </div>
             
             <div class="more-articles">
-                <a href="news.html">More news articles →</a>
+                <a href="News.html">More news articles →</a>
             </div>
         </div>
     </section>
@@ -389,10 +373,10 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="https://www.instagram.com/streetmedicineatpitt/?hl=en" target="_blank">
+                <a href="https://www.instagram.com/streetmedicineatpitt/?hl=en" target="_blank" aria-label="Instagram">
                     <img src="https://ssl.gstatic.com/atari/images/sociallinks/instagram_gray_44dp.png" alt="Instagram">
                 </a>
-                 <a href="https://www.facebook.com/streetmedicineatpitt/" target="_blank" aria-label="Facebook">
+                <a href="https://www.facebook.com/streetmedicineatpitt/" target="_blank" aria-label="Facebook">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                     </svg>
@@ -402,7 +386,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- JavaScript Files -->
+    <script src="js/navbar.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
