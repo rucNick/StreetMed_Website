@@ -1,0 +1,61 @@
+/* ================================================
+   GET INVOLVED PAGE STYLES
+   ================================================ */
+
+/* Hero Section with Bridge Background - Full Screen */
+.get-involved-hero {
+    min-height: 100vh;
+    margin-top: -60px; /* Offset the fixed navbar height */
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.get-involved-hero .hero-background {
+    background-image: url('../Get Involved/bridge.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.8);
+}
+
+.get-involved-hero .hero-content {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.page-title {
+    font-family: 'Lato', sans-serif;
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* ================================================
+   RESPONSIVE STYLES FOR GET INVOLVED PAGE
+   ================================================ */
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 48px;
+    }
+    
+    .get-involved-hero .hero-content {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+    
+    .get-involved-hero .hero-content {
+        padding: 30px 15px;
+    }
+}
