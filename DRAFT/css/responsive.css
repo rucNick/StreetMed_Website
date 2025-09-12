@@ -14,16 +14,6 @@
 /* Mobile View */
 @media (max-width: 768px) {
     /* Navigation */
-    .main-nav ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(40, 40, 40, 0.95);
-        flex-direction: column;
-        padding: 20px;
-    }
 
     .main-nav ul.active {
         display: flex;

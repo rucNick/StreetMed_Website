@@ -1,21 +1,6 @@
-/* Main JavaScript File */
-
-// Mobile Menu Toggle
-function toggleMenu() {
-    const menu = document.getElementById('navMenu');
-    menu.classList.toggle('active');
-}
-
-// Smooth scroll to content
-function scrollToContent() {
-    const missionSection = document.getElementById('mission');
-    if (missionSection) {
-        missionSection.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
-}
+/* ================================================
+   MAIN JAVASCRIPT FILE 
+   ================================================ */
 
 // FAQ Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
@@ -43,12 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
                     const target = entry.target;
                     const finalValue = target.getAttribute('data-target');
                     const hasPlus = finalValue.includes('+') || parseInt(finalValue) >= 100;
                     const numValue = parseInt(finalValue.replace('+', ''));
                     
+                    target.classList.add('animated');
                     animateValue(target, 0, numValue, 2000, hasPlus);
                     observer.unobserve(target);
                 }
@@ -90,49 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start animations when page loads
     animateNumbers();
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const navMenu = document.getElementById('navMenu');
-        const menuToggle = document.querySelector('.menu-toggle');
-        
-        if (navMenu && menuToggle) {
-            if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-                navMenu.classList.remove('active');
-            }
-        }
-    });
-
-    // Handle submenu hover for desktop
-    const menuItems = document.querySelectorAll('.main-nav li');
-    menuItems.forEach(item => {
-        let hoverTimeout;
-        
-        item.addEventListener('mouseenter', function() {
-            clearTimeout(hoverTimeout);
-            const submenu = this.querySelector('.submenu');
-            if (submenu) {
-                submenu.style.display = 'flex';
-            }
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            const submenu = this.querySelector('.submenu');
-            if (submenu) {
-                hoverTimeout = setTimeout(() => {
-                    submenu.style.display = 'none';
-                }, 300);
-            }
-        });
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Smooth scroll for anchor links (excluding navigation handled by navbar.js)
+    document.querySelectorAll('a[href^="#"]:not(.main-nav a)').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
-            if (targetId !== '#') {
+            if (targetId !== '#' && targetId !== '') {
                 const target = document.querySelector(targetId);
                 if (target) {
+                    e.preventDefault();
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
@@ -140,23 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-    });
-
-    // Add scroll effect to navigation
-    let lastScroll = 0;
-    window.addEventListener('scroll', function() {
-        const nav = document.querySelector('.main-nav');
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            nav.style.background = 'rgba(40, 40, 40, 0.98)';
-            nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
-        } else {
-            nav.style.background = 'rgba(40, 40, 40, 0.95)';
-            nav.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
-        }
-        
-        lastScroll = currentScroll;
     });
 
     // Intersection Observer for fade-in animations
