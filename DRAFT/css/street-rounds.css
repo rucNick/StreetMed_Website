@@ -1,0 +1,497 @@
+/* ================================================
+   STREET ROUNDS PAGE STYLES
+   ================================================ */
+
+/* Hero Section */
+.street-rounds-hero {
+    position: relative;
+    min-height: 50vh;
+    margin-top: -60px;
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #001f54 0%, #003594 100%);
+    overflow: hidden;
+}
+
+.street-rounds-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Street Rounds/Bridge.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.street-rounds-hero .hero-content {
+    text-align: center;
+    z-index: 1;
+    padding: 60px 40px;
+}
+
+.street-rounds-hero .page-title {
+    font-family: 'Lora', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 20px 0;
+}
+
+.street-rounds-hero .page-subtitle {
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Onboarding Section */
+.onboarding-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.onboarding-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #0b5394;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+.important-notice {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.important-notice p {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Onboarding Steps */
+.onboarding-steps {
+    margin-top: 40px;
+}
+
+.step-card {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #0b5394;
+}
+
+.step-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+    background: #0b5394;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Lora', serif;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #001f54;
+    margin: 0 0 10px 0;
+}
+
+.step-content p {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Links */
+.link-primary {
+    color: #0b5394;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.link-primary:hover {
+    color: #FFB81C;
+}
+
+.link-secondary {
+    color: #0b5394;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.link-secondary:hover {
+    color: #FFB81C;
+}
+
+/* HIPAA Instructions */
+.hipaa-instructions {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.hipaa-instructions h4 {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #001f54;
+    margin: 0 0 15px 0;
+}
+
+.hipaa-instructions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hipaa-instructions ul li {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #333;
+    padding: 8px 0 8px 30px;
+    position: relative;
+}
+
+.hipaa-instructions ul li::before {
+    content: '▪';
+    position: absolute;
+    left: 10px;
+    color: #0b5394;
+    font-weight: 700;
+}
+
+/* Info Box */
+.info-box {
+    margin-top: 15px;
+    padding: 15px;
+    background: #e8f4fd;
+    border-left: 3px solid #0b5394;
+    border-radius: 5px;
+}
+
+.info-box p {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.cta-section h2 {
+    font-family: 'Lora', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #001f54;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.cta-section p {
+    font-size: 16px;
+    color: #666;
+    margin: 0 0 30px 0;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Info Section */
+.info-section {
+    padding: 80px 0;
+    background: #f8f8f8;
+}
+
+.info-section h2 {
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #001f54;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background: #0b5394;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-icon svg {
+    width: 30px;
+    height: 30px;
+    stroke: white;
+    stroke-width: 2;
+}
+
+.info-card h3 {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #001f54;
+    margin: 0 0 15px 0;
+}
+
+.info-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ================================================
+   RESPONSIVE STYLES
+   ================================================ */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .onboarding-content {
+        padding: 0 20px;
+    }
+    
+    .info-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .street-rounds-hero .page-title {
+        font-size: 36px;
+    }
+    
+    .street-rounds-hero .page-subtitle {
+        font-size: 18px;
+    }
+    
+    .street-rounds-hero .hero-content {
+        padding: 40px 20px;
+    }
+    
+    .onboarding-section {
+        padding: 60px 20px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .step-card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .step-number {
+        flex: 0 0 50px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .step-content h3 {
+        font-size: 20px;
+    }
+    
+    .step-content p {
+        font-size: 15px;
+    }
+    
+    .hipaa-instructions ul li {
+        font-size: 14px;
+        padding-left: 25px;
+    }
+    
+    .cta-section {
+        padding: 30px 20px;
+    }
+    
+    .cta-section h2 {
+        font-size: 28px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .info-section {
+        padding: 60px 20px;
+    }
+    
+    .info-section h2 {
+        font-size: 28px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+    .street-rounds-hero .page-title {
+        font-size: 28px;
+    }
+    
+    .street-rounds-hero .page-subtitle {
+        font-size: 16px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .important-notice {
+        padding: 15px;
+    }
+    
+    .important-notice p {
+        font-size: 14px;
+    }
+    
+    .step-card {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .step-content h3 {
+        font-size: 18px;
+    }
+    
+    .step-content p {
+        font-size: 14px;
+    }
+    
+    .hipaa-instructions {
+        padding: 15px;
+    }
+    
+    .hipaa-instructions h4 {
+        font-size: 15px;
+    }
+    
+    .hipaa-instructions ul li {
+        font-size: 13px;
+    }
+    
+    .info-box {
+        padding: 12px;
+    }
+    
+    .info-box p {
+        font-size: 13px;
+    }
+    
+    .cta-section h2 {
+        font-size: 24px;
+    }
+    
+    .cta-section p {
+        font-size: 14px;
+    }
+    
+    .info-card {
+        padding: 25px;
+    }
+    
+    .info-card h3 {
+        font-size: 20px;
+    }
+    
+    .info-card p {
+        font-size: 14px;
+    }
+}
