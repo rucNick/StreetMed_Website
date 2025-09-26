@@ -16,21 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const events = {
         '2025-1-4': { type: 'street-rounds', title: 'Downtown Street Rounds' },
         '2025-1-5': { type: 'street-rounds', title: 'East Liberty Street Rounds' },
-        '2025-1-11': { type: 'street-rounds', title: 'Downtown Street Rounds' },
-        '2025-1-12': { type: 'street-rounds', title: 'East Liberty Street Rounds' },
-        '2025-1-15': { type: 'workshop', title: 'Volunteer Training' },
-        '2025-1-18': { type: 'street-rounds', title: 'Downtown Street Rounds' },
-        '2025-1-19': { type: 'street-rounds', title: 'East Liberty Street Rounds' },
-        '2025-1-22': { type: 'meeting', title: 'Board Meeting' },
-        '2025-1-25': { type: 'street-rounds', title: 'Downtown Street Rounds' },
-        '2025-1-26': { type: 'street-rounds', title: 'East Liberty Street Rounds' },
-        '2025-1-28': { type: 'fundraiser', title: 'Supply Drive Kickoff' },
-        '2025-2-1': { type: 'street-rounds', title: 'Downtown Street Rounds' },
-        '2025-2-2': { type: 'street-rounds', title: 'East Liberty Street Rounds' },
-        '2025-2-8': { type: 'street-rounds', title: 'Downtown Street Rounds' },
-        '2025-2-9': { type: 'street-rounds', title: 'East Liberty Street Rounds' },
-        '2025-2-15': { type: 'workshop', title: 'Trauma-Informed Care Training' },
-        '2025-2-22': { type: 'fundraiser', title: 'Annual Benefit Dinner' }
     };
     
     function generateCalendar(month, year) {
@@ -148,24 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Sample additional events (in production, this would be an API call)
         const moreEvents = [
-            {
-                title: 'Summer Outreach Initiative',
-                date: 'Jul 20, 2024',
-                description: 'Extended street rounds during the hottest months, providing hydration and cooling supplies.',
-                stats: { volunteers: '100+', served: '500+' }
-            },
-            {
-                title: 'Medical Student Symposium',
-                date: 'Jun 15, 2024',
-                description: 'Educational symposium on street medicine practices for healthcare students.',
-                stats: { attendees: '200', schools: '8' }
-            },
-            {
-                title: 'Spring Cleaning Drive',
-                date: 'May 10, 2024',
-                description: 'Community-wide collection of hygiene products and cleaning supplies.',
-                stats: { items: '2000+', raised: '$8K' }
-            }
+                // future implemented
         ];
         
         // Add new event cards
