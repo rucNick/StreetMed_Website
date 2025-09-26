@@ -134,10 +134,12 @@
 
 #street-rounds-carousel .carousel-container {
     aspect-ratio: 1.025 / 1; /* Matching the original Google Sites aspect ratio */
+    min-height: 300px; /* Minimum height for mobile */
 }
 
 #resource-team-carousel .carousel-container {
     aspect-ratio: 1.08 / 1; /* Matching the original Google Sites aspect ratio */
+    min-height: 300px; /* Minimum height for mobile */
 }
 
 .carousel-container {
@@ -146,6 +148,7 @@
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background: #f0f0f0; /* Fallback background color */
 }
 
 .carousel-track {
@@ -161,10 +164,12 @@
     object-fit: cover;
     opacity: 0;
     transition: opacity 0.5s ease;
+    display: block; /* Ensure images are displayed */
 }
 
 .carousel-image.active {
     opacity: 1;
+    z-index: 2; /* Ensure active image is on top */
 }
 
 /* Carousel Controls */
@@ -238,6 +243,37 @@
 .cta-section .btn {
     display: inline-block;
     margin: 0 10px;
+}
+
+/* Highlight button for How to Help */
+.btn-highlight {
+    background: #FFB81C;
+    color: #003594;
+    border-color: #FFB81C;
+    font-size: 18px;
+    padding: 16px 40px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(255, 184, 28, 0.4);
+    animation: pulse 2s infinite;
+}
+
+.btn-highlight:hover {
+    background: #ffcc4d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 184, 28, 0.6);
+}
+
+/* Pulse animation to draw attention */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(255, 184, 28, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(255, 184, 28, 0.7);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(255, 184, 28, 0.4);
+    }
 }
 
 /* Resource Team Section */
@@ -355,6 +391,14 @@
         padding: 10px;
     }
     
+    /* Ensure carousels maintain aspect ratio on mobile */
+    #street-rounds-carousel .carousel-container,
+    #resource-team-carousel .carousel-container {
+        aspect-ratio: 1 / 1; /* Square aspect ratio on mobile */
+        min-height: 280px;
+        height: auto;
+    }
+    
     .intro-content p {
         font-size: 16px;
     }
@@ -445,8 +489,21 @@
         padding: 8px 0 8px 25px;
     }
     
+    /* Ensure carousels display on small mobile */
+    #street-rounds-carousel .carousel-container,
+    #resource-team-carousel .carousel-container {
+        aspect-ratio: 1 / 1;
+        min-height: 250px;
+        width: 100%;
+        display: block;
+    }
+    
     .carousel-container {
         border-radius: 8px;
+    }
+    
+    .carousel-track {
+        height: 100%;
     }
     
     .carousel-dots {
