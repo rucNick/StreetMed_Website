@@ -1,0 +1,833 @@
+/* ================================================
+   EVENTS PAGE STYLES
+   ================================================ */
+
+/* Hero Section */
+.events-hero {
+    position: relative;
+    min-height: 60vh;
+    margin-top: -60px;
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #001f54 0%, #003594 100%);
+    overflow: hidden;
+}
+
+.events-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Content/Events/bridge.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.events-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 31, 84, 0.6);
+    z-index: 1;
+}
+
+.events-hero .hero-content {
+    text-align: center;
+    z-index: 2;
+    padding: 80px 40px;
+    max-width: 900px;
+}
+
+.events-hero .page-title {
+    font-family: 'Lora', serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 20px 0;
+}
+
+.events-hero .page-subtitle {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===================================
+   Calendar Section
+   =================================== */
+.calendar-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.calendar-section .section-title {
+    font-family: 'Lora', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #001f54;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.calendar-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.calendar-month-year {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #001f54;
+    margin: 0;
+}
+
+.calendar-nav {
+    width: 40px;
+    height: 40px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calendar-nav:hover {
+    background: #003594;
+    color: white;
+}
+
+.calendar-nav svg {
+    width: 20px;
+    height: 20px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calendar-day-header {
+    background: #003594;
+    color: white;
+    padding: 15px 5px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.calendar-day {
+    background: white;
+    min-height: 80px;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calendar-day:hover {
+    background: #f8f9fa;
+}
+
+.calendar-day.other-month {
+    background: #fafafa;
+    color: #999;
+}
+
+.calendar-day.today {
+    background: #fff3cd;
+}
+
+.calendar-day-number {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.calendar-day.has-event::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.calendar-day.street-rounds::after {
+    background: #28a745;
+}
+
+.calendar-day.workshop::after {
+    background: #007bff;
+}
+
+.calendar-day.fundraiser::after {
+    background: #ffc107;
+}
+
+.calendar-day.meeting::after {
+    background: #6c757d;
+}
+
+/* Calendar Legend */
+.calendar-legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.legend-dot.street-rounds {
+    background: #28a745;
+}
+
+.legend-dot.workshop {
+    background: #007bff;
+}
+
+.legend-dot.fundraiser {
+    background: #ffc107;
+}
+
+.legend-dot.meeting {
+    background: #6c757d;
+}
+
+/* ===================================
+   Upcoming Events Section
+   =================================== */
+.upcoming-events {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.upcoming-events .section-title {
+    font-family: 'Lora', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #001f54;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.event-date {
+    background: #003594;
+    color: white;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+}
+
+.date-day {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.date-month {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-content {
+    padding: 25px 30px;
+    flex: 1;
+}
+
+.event-category {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.event-category.workshop {
+    background: #e7f3ff;
+    color: #007bff;
+}
+
+.event-category.fundraiser {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.event-category.meeting {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+.event-title {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #001f54;
+    margin: 0 0 15px 0;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.detail-item svg {
+    width: 18px;
+    height: 18px;
+    stroke: #666;
+}
+
+.event-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.event-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #FFB81C;
+    color: #003594;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.event-btn:hover {
+    background: #ffcc4d;
+    transform: translateX(3px);
+}
+
+/* Weekly Rounds Notice */
+.weekly-rounds-notice {
+    background: white;
+    border: 2px solid #28a745;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.notice-icon {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+    background: #28a745;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notice-icon svg {
+    width: 30px;
+    height: 30px;
+    stroke: white;
+}
+
+.notice-content h3 {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #001f54;
+    margin: 0 0 8px 0;
+}
+
+.notice-content p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+.notice-content a {
+    color: #28a745;
+    text-decoration: underline;
+}
+
+/* ===================================
+   Past Events Section
+   =================================== */
+.past-events {
+    padding: 80px 0;
+    background: white;
+}
+
+.past-events .section-title {
+    font-family: 'Lora', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #001f54;
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+
+.past-events .section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin: 0 0 50px 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.past-events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.past-event-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.past-event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.past-event-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.past-event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.past-event-card:hover .past-event-image img {
+    transform: scale(1.05);
+}
+
+.event-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+}
+
+.event-date-overlay {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.past-event-content {
+    padding: 25px;
+}
+
+.past-event-content h3 {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #001f54;
+    margin: 0 0 12px 0;
+}
+
+.past-event-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0 0 20px 0;
+}
+
+.event-stats {
+    display: flex;
+    gap: 30px;
+}
+
+.stat {
+    font-size: 14px;
+    color: #333;
+}
+
+.stat strong {
+    color: #003594;
+    font-weight: 700;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+/* View More Section */
+.view-more-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.view-more-section .btn {
+    padding: 14px 35px;
+    font-size: 16px;
+}
+
+/* ===================================
+   CTA Section
+   =================================== */
+.events-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #001f54 0%, #003594 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.events-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 184, 28, 0.1);
+    border-radius: 50%;
+}
+
+.events-cta .cta-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.events-cta h2 {
+    font-family: 'Lora', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 20px 0;
+}
+
+.events-cta p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 40px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.events-cta .cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.events-cta .btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.events-cta .btn-secondary:hover {
+    background: white;
+    color: #003594;
+}
+
+/* ===================================
+   Responsive Styles
+   =================================== */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .past-events-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .events-hero .page-title {
+        font-size: 42px;
+    }
+    
+    .events-hero .page-subtitle {
+        font-size: 18px;
+    }
+    
+    .events-hero .hero-content {
+        padding: 60px 20px;
+    }
+    
+    .calendar-section {
+        padding: 60px 20px;
+    }
+    
+    .calendar-section .section-title {
+        font-size: 32px;
+    }
+    
+    .calendar-wrapper {
+        padding: 20px 15px;
+    }
+    
+    .calendar-month-year {
+        font-size: 22px;
+    }
+    
+    .calendar-day {
+        min-height: 60px;
+        padding: 5px;
+    }
+    
+    .calendar-day-number {
+        font-size: 12px;
+    }
+    
+    .calendar-legend {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .upcoming-events {
+        padding: 60px 20px;
+    }
+    
+    .upcoming-events .section-title {
+        font-size: 32px;
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .event-date {
+        flex-direction: row;
+        padding: 20px;
+        width: 100%;
+        min-width: auto;
+        gap: 15px;
+    }
+    
+    .weekly-rounds-notice {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+    
+    .past-events {
+        padding: 60px 20px;
+    }
+    
+    .past-events .section-title {
+        font-size: 32px;
+    }
+    
+    .past-events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .events-cta {
+        padding: 80px 20px;
+    }
+    
+    .events-cta h2 {
+        font-size: 32px;
+    }
+    
+    .events-cta p {
+        font-size: 16px;
+    }
+    
+    .events-cta .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .events-cta .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+    .events-hero .page-title {
+        font-size: 32px;
+    }
+    
+    .events-hero .page-subtitle {
+        font-size: 16px;
+    }
+    
+    .calendar-section .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .calendar-wrapper {
+        padding: 15px 10px;
+    }
+    
+    .calendar-month-year {
+        font-size: 18px;
+    }
+    
+    .calendar-nav {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .calendar-day-header {
+        font-size: 12px;
+        padding: 10px 2px;
+    }
+    
+    .calendar-day {
+        min-height: 50px;
+    }
+    
+    .upcoming-events .section-title {
+        font-size: 28px;
+    }
+    
+    .event-title {
+        font-size: 20px;
+    }
+    
+    .event-content {
+        padding: 20px;
+    }
+    
+    .past-event-content {
+        padding: 20px;
+    }
+    
+    .past-event-content h3 {
+        font-size: 20px;
+    }
+    
+    .events-cta h2 {
+        font-size: 28px;
+    }
+}
+
+/* Very Small Mobile */
+@media (max-width: 360px) {
+    .events-hero .page-title {
+        font-size: 28px;
+    }
+    
+    .calendar-grid {
+        font-size: 10px;
+    }
+    
+    .event-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
