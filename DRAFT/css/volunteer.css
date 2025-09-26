@@ -1,0 +1,499 @@
+/* ================================================
+   VOLUNTEER PAGE STYLES
+   ================================================ */
+
+/* Hero Section */
+.volunteer-hero {
+    position: relative;
+    min-height: 50vh; /* Reduced from 100vh */
+    margin-top: -60px;
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.volunteer-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.volunteer-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/* Street Rounds Section */
+.street-rounds-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.street-rounds-section .section-title {
+    font-family: 'Instrument Sans', Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #001f54;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+/* Two Column Layout */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.two-column-layout.reverse {
+    direction: rtl;
+}
+
+.two-column-layout.reverse > * {
+    direction: ltr;
+}
+
+.content-column {
+    padding: 20px;
+}
+
+.gallery-column {
+    padding: 20px;
+}
+
+.intro-content {
+    margin-bottom: 40px;
+}
+
+.intro-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+    text-align: left;
+}
+
+/* Volunteer Benefits */
+.volunteer-benefits {
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid #003594;
+    margin-bottom: 30px;
+}
+
+.volunteer-benefits h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #001f54;
+    margin: 0 0 20px 0;
+    text-decoration: underline;
+}
+
+.volunteer-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.volunteer-benefits ul li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.volunteer-benefits ul li::before {
+    content: '■';
+    position: absolute;
+    left: 0;
+    color: #003594;
+}
+
+/* Photo Galleries */
+.photo-carousel,
+.resource-carousel {
+    width: 100%;
+}
+
+#street-rounds-carousel .carousel-container {
+    aspect-ratio: 1.025 / 1; /* Matching the original Google Sites aspect ratio */
+}
+
+#resource-team-carousel .carousel-container {
+    aspect-ratio: 1.08 / 1; /* Matching the original Google Sites aspect ratio */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+/* Carousel Controls */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+.carousel-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    background: white;
+    width: 25px;
+    border-radius: 5px;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta-section .btn {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Resource Team Section */
+.resource-team-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.resource-team-section .section-title {
+    font-family: 'Instrument Sans', Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #001f54;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.resource-text {
+    padding: 20px;
+}
+
+.intro-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.resource-details h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #001f54;
+    margin: 0 0 20px 0;
+    text-decoration: underline;
+}
+
+.resource-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.resource-details ul li {
+    padding: 8px 0 8px 30px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.resource-details ul li::before {
+    content: '■';
+    position: absolute;
+    left: 0;
+    color: #003594;
+}
+
+.resource-details p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* ================================================
+   RESPONSIVE STYLES
+   ================================================ */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .two-column-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .two-column-layout.reverse {
+        direction: ltr;
+    }
+    
+    .gallery-column {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    #street-rounds-carousel .carousel-container,
+    #resource-team-carousel .carousel-container {
+        aspect-ratio: 16 / 10; /* Normalize aspect ratio on smaller screens */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .volunteer-hero {
+        min-height: 40vh; /* Even smaller on mobile */
+    }
+    
+    .street-rounds-section {
+        padding: 60px 20px;
+    }
+    
+    .street-rounds-section .section-title {
+        font-size: 36px;
+    }
+    
+    .resource-team-section .section-title {
+        font-size: 36px;
+    }
+    
+    .two-column-layout {
+        padding: 0;
+    }
+    
+    .content-column,
+    .gallery-column {
+        padding: 10px;
+    }
+    
+    .intro-content p {
+        font-size: 16px;
+    }
+    
+    .volunteer-benefits {
+        padding: 25px;
+    }
+    
+    .volunteer-benefits h3 {
+        font-size: 18px;
+    }
+    
+    .volunteer-benefits ul li {
+        font-size: 15px;
+        padding-left: 25px;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-btn.prev {
+        left: 10px;
+    }
+    
+    .carousel-btn.next {
+        right: 10px;
+    }
+    
+    .resource-team-section {
+        padding: 60px 20px;
+    }
+    
+    .resource-text {
+        padding: 10px;
+    }
+    
+    .intro-text {
+        font-size: 16px;
+    }
+    
+    .resource-details h3 {
+        font-size: 18px;
+    }
+    
+    .resource-details ul li {
+        font-size: 15px;
+    }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+    .volunteer-hero {
+        min-height: 35vh; /* Even smaller on small mobile */
+    }
+    
+    .street-rounds-section .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .resource-team-section .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .intro-content {
+        margin-bottom: 30px;
+    }
+    
+    .intro-content p {
+        font-size: 15px;
+    }
+    
+    .volunteer-benefits {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .volunteer-benefits h3 {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    
+    .volunteer-benefits ul li {
+        font-size: 14px;
+        padding: 8px 0 8px 25px;
+    }
+    
+    .carousel-container {
+        border-radius: 8px;
+    }
+    
+    .carousel-dots {
+        bottom: 10px;
+    }
+    
+    .carousel-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .carousel-dot.active {
+        width: 20px;
+    }
+    
+    .intro-text {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .resource-details h3 {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    
+    .resource-details ul li {
+        font-size: 14px;
+        padding: 6px 0 6px 25px;
+    }
+    
+    .resource-details p {
+        font-size: 14px;
+    }
+    
+    .cta-section .btn {
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+}
+
+/* Very Small Mobile */
+@media (max-width: 360px) {
+    .street-rounds-section .section-title {
+        font-size: 24px;
+    }
+    
+    .resource-team-section .section-title {
+        font-size: 24px;
+    }
+}
