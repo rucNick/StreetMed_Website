@@ -1,5 +1,5 @@
 /* ================================================
-   NAVBAR JS
+   NAVBAR JS 
    ================================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -33,17 +33,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Handle submenu clicks - SIMPLIFIED
+    // Handle submenu clicks - Enhanced with Home button double-click
     const submenuParents = document.querySelectorAll('.has-submenu > a');
     
     submenuParents.forEach(function(link) {
         link.addEventListener('click', function(e) {
-            // Only on mobile
-            if (window.innerWidth <= 768) {
+            const parent = this.parentElement;
+            const isHomeButton = link.textContent.trim() === 'Home';
+            
+            // Desktop behavior
+            if (window.innerWidth > 768) {
+                if (isHomeButton) {
+                    // If submenu is visible, navigate to home
+                    if (parent.classList.contains('show-submenu') || parent.matches(':hover')) {
+                        window.location.href = 'Home.html';
+                    } else {
+                        e.preventDefault();
+                        parent.classList.add('show-submenu');
+                        // Remove after a delay if not hovering
+                        setTimeout(() => {
+                            if (!parent.matches(':hover')) {
+                                parent.classList.remove('show-submenu');
+                            }
+                        }, 3000);
+                    }
+                } else {
+                    // For other menu items, prevent default
+                    e.preventDefault();
+                }
+            } 
+            // Mobile behavior
+            else {
                 e.preventDefault();
                 e.stopPropagation();
                 
-                const parent = this.parentElement;
+                // Check if Home button and submenu is already open
+                if (isHomeButton && parent.classList.contains('show-submenu')) {
+                    // Navigate to homepage
+                    window.location.href = 'Home.html';
+                    return;
+                }
                 
                 // Close other submenus
                 document.querySelectorAll('.has-submenu').forEach(function(item) {

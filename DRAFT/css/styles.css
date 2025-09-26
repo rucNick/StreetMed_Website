@@ -1,5 +1,5 @@
 /* ================================================
-   MAIN STYLES FOR STREET MEDICINE AT PITT
+   MAIN STYLES
    ================================================ */
 
 body {
@@ -716,4 +716,427 @@ footer {
     background: #e5e7eb;
     margin: 60px auto;
     max-width: 100%;
+}
+
+/* ================================================
+   HOMEPAGE REDESIGN STYLES - ADDED TO EXISTING
+   ================================================ */
+
+/* Enhanced Hero Section */
+.hero-section.enhanced {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 31, 84, 0.8) 0%, rgba(0, 53, 148, 0.6) 100%);
+    z-index: 1;
+}
+
+.hero-text-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+/* Animated titles */
+.hero-title.animated,
+.hero-subtitle.animated,
+.hero-description.animated {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+.hero-subtitle.animated {
+    animation-delay: 0.3s;
+}
+
+.hero-description.animated {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Metrics */
+.metrics-container.enhanced {
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.9s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.metric-card .metric-icon {
+    margin-bottom: 15px;
+}
+
+.metric-card .metric-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: #FFB81C;
+    stroke-width: 2;
+}
+
+/* Enhanced CTA Buttons */
+.cta-buttons.enhanced {
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.2s;
+    opacity: 0;
+}
+
+.cta-buttons.enhanced .btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cta-buttons.enhanced .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.cta-buttons.enhanced .btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Enhanced Scroll Indicator */
+.scroll-indicator.enhanced {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.scroll-text {
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* Quick Stats Bar */
+.quick-stats-bar {
+    background: #001f54;
+    padding: 30px 0;
+    border-bottom: 3px solid #FFB81C;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-item {
+    color: white;
+}
+
+.stat-value {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFB81C;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+/* Redesigned Mission Section */
+.mission-section.redesigned {
+    background: white;
+    padding: 100px 0;
+}
+
+.mission-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header {
+    font-family: 'Lora', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #001f54;
+    margin: 0 0 15px 0;
+}
+
+.section-underline {
+    width: 80px;
+    height: 4px;
+    background: #FFB81C;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.mission-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.mission-column {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.mission-column:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mission-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: #001f54;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission-icon svg {
+    width: 35px;
+    height: 35px;
+    stroke: white;
+    stroke-width: 2;
+}
+
+.mission-column h3 {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #001f54;
+    margin-bottom: 15px;
+}
+
+.mission-column p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* What We Do Section */
+.what-we-do-section {
+    background: #f8f9fa;
+    padding: 100px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    border-color: #FFB81C;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #001f54 0%, #003594 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon svg {
+    width: 30px;
+    height: 30px;
+    stroke: white;
+    stroke-width: 2;
+}
+
+.service-card h3 {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #001f54;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Enhanced Impact Section */
+.impact-section.enhanced {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.impact-grid.enhanced {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.impact-section.enhanced .impact-card {
+    background: white;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.impact-section.enhanced .impact-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced Get Involved Section */
+.get-involved.enhanced {
+    background: white;
+    padding: 100px 0;
+}
+
+.get-involved.enhanced .involvement-card {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 31, 84, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-overlay span {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.involvement-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.involvement-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card-content h3 a {
+    color: #001f54;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card-content h3 a:hover {
+    color: #FFB81C;
+}
+
+.card-content p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card-link {
+    color: #003594;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.card-link:hover {
+    color: #FFB81C;
+    padding-left: 5px;
 }
