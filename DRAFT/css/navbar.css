@@ -1,17 +1,17 @@
 /* ================================================
-   NAVBAR STYLES
+   NAVBAR STYLES - UPDATED COLOR SCHEME
    ================================================ */
 
 /* Navigation Bar */
 .main-nav {
-    background: rgba(40, 40, 40, 0.95);
+    background: linear-gradient(135deg, #001f54 0%, #003594 100%);
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 99999;
     height: 60px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 31, 84, 0.3);
 }
 
 .nav-container {
@@ -31,6 +31,7 @@
     text-decoration: none;
     white-space: nowrap;
     transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 .logo:hover {
@@ -57,8 +58,9 @@
     padding: 10px 12px;
     display: inline-block;
     font-size: 15px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     white-space: nowrap;
+    font-weight: 500;
 }
 
 #navMenu > li > a:hover {
@@ -67,6 +69,7 @@
 
 #navMenu a.active {
     color: #FFB81C;
+    font-weight: 600;
 }
 
 /* Hide mobile toggle on desktop */
@@ -79,13 +82,14 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgba(40, 40, 40, 0.98);
+    background: linear-gradient(135deg, #001f54 0%, #003594 100%);
     min-width: 160px;
     list-style: none;
     padding: 5px 0;
     display: none;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 31, 84, 0.4);
     border-radius: 0 0 8px 8px;
+    border-top: 2px solid #FFB81C;
 }
 
 #navMenu li:hover > .submenu {
@@ -106,7 +110,7 @@
 }
 
 #navMenu .submenu a:hover {
-    background: rgba(255, 184, 28, 0.1);
+    background: rgba(255, 184, 28, 0.15);
     color: #FFB81C;
     padding-left: 25px;
 }
@@ -120,7 +124,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 31, 84, 0.7);
     z-index: 99997;
 }
 
@@ -148,7 +152,7 @@
         display: block;
         width: 25px;
         height: 2px;
-        background: #f9f9f9;
+        background: #FFB81C;
         margin: 4px 0;
         transition: 0.3s;
         border-radius: 2px;
@@ -174,7 +178,7 @@
         left: -300px;
         width: 280px;
         height: calc(100vh - 60px);
-        background: #282828;
+        background: linear-gradient(180deg, #001f54 0%, #002a6b 100%);
         flex-direction: column;
         padding: 0;
         margin: 0;
@@ -183,6 +187,7 @@
         z-index: 99998;
         overflow-y: auto;
         display: flex !important;
+        border-right: 2px solid #FFB81C;
     }
     
     /* Show menu when active */
@@ -194,7 +199,7 @@
     #navMenu > li {
         width: 100%;
         margin: 0;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255, 184, 28, 0.2);
     }
     
     #navMenu > li > a {
@@ -209,7 +214,7 @@
     
     #navMenu > li > a:active,
     #navMenu > li > a:hover {
-        background: rgba(255, 184, 28, 0.1);
+        background: rgba(255, 184, 28, 0.15);
         color: #FFB81C !important;
     }
     
@@ -217,7 +222,7 @@
     #navMenu .submenu {
         position: static !important;
         width: 100%;
-        background: #1f1f1f !important;
+        background: rgba(0, 31, 84, 0.5) !important;
         padding: 0 !important;
         margin: 0;
         overflow: hidden;
@@ -226,6 +231,7 @@
         transition: max-height 0.3s ease;
         border-radius: 0;
         box-shadow: none;
+        border-top: none;
     }
     
     /* Show submenu when parent has class */
@@ -234,7 +240,7 @@
     }
     
     #navMenu .submenu li {
-        border-bottom: 1px solid rgba(255,255,255,0.05);
+        border-bottom: 1px solid rgba(255, 184, 28, 0.1);
     }
     
     #navMenu .submenu li:last-child {
@@ -243,14 +249,14 @@
     
     #navMenu .submenu a {
         padding: 15px 20px 15px 40px;
-        color: rgba(255,255,255,0.8) !important;
+        color: rgba(255, 255, 255, 0.9) !important;
         font-size: 15px;
         display: block;
     }
     
     #navMenu .submenu a:active,
     #navMenu .submenu a:hover {
-        background: rgba(255, 184, 28, 0.05);
+        background: rgba(255, 184, 28, 0.1);
         color: #FFB81C !important;
         padding-left: 45px;
     }
@@ -262,7 +268,7 @@
         right: 20px;
         top: 50%;
         transform: translateY(-50%);
-        color: white;
+        color: #FFB81C;
         font-size: 12px;
         transition: transform 0.3s;
     }
@@ -273,8 +279,9 @@
     
     /* Active page on mobile */
     #navMenu a.active {
-        background: rgba(255, 184, 28, 0.1);
+        background: rgba(255, 184, 28, 0.2);
         color: #FFB81C !important;
+        font-weight: 600;
     }
 }
 
