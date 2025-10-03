@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research & Publications - Street Medicine at Pitt</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/articles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="Home.html" class="logo">Street Medicine at Pitt</a>
+            <button type="button" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="navMenu">
+                <li class="has-submenu">
+                    <a href="javascript:void(0)">Home</a>
+                    <ul class="submenu">
+                        <li><a href="About us.html">About Us</a></li>
+                        <li><a href="Resources.html">Resources</a></li>
+                        <li><a href="News.html">News</a></li>
+                        <li><a href="articles.html">Articles</a></li>
+                    </ul>
+                </li>
+                <li><a href="Events.html">Events & Calendar</a></li>
+                <li><a href="Donate.html">Donate</a></li>
+                <li class="has-submenu">
+                    <a href="javascript:void(0)">Volunteer</a>
+                    <ul class="submenu">
+                        <li><a href="Get Involed.html">Get Involved</a></li>
+                        <li><a href="Volunteer.html">Street Rounds</a></li>
+                    </ul>
+                </li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Overlay for mobile menu -->
+    <div class="mobile-nav-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="articles-hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="page-title">Research & Publications</h1>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="articles-intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2>Contributing to the Field</h2>
+                <p class="intro-text">
+                    Street Medicine at Pitt is committed to advancing the field through rigorous research and scholarly publications. 
+                    Our work focuses on understanding health outcomes, developing innovative care models, and advocating for evidence-based 
+                    approaches to serving people experiencing homelessness. Below you'll find our published research, ongoing studies, 
+                    and collaborative work with academic institutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="articles-filter">
+        <div class="container">
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Publications</button>
+                <button class="filter-btn" data-filter="research">Research Articles</button>
+                <button class="filter-btn" data-filter="case-study">Case Studies</button>
+                <button class="filter-btn" data-filter="review">Reviews</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid Section -->
+    <section class="articles-section">
+        <div class="container">
+            <div class="articles-grid">
+                
+                <!-- Article Card 1 -->
+                <article class="article-card" data-category="research">
+                    <div class="article-header">
+                        <span class="article-type research">Research Article</span>
+                        <span class="article-year">XXXX</span>
+                    </div>
+                    <h3 class="article-title">Paper 1</h3>
+                    <div class="article-authors">
+                        <span>Author Name</span>
+                    </div>
+                    <p class="article-journal">Journal Name, Vol. XX, Issue X</p>
+                    <p class="article-abstract">
+                        Abstract text here...
+                    </p>
+                    <div class="article-meta">
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            </svg>
+                            XXX Citations
+                        </span>
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                            Open Access
+                        </span>
+                    </div>
+                    <div class="article-actions">
+                        <a href="#" class="btn btn-primary">View Abstract</a>
+                        <a href="#" class="btn btn-secondary">Download PDF</a>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="article-card" data-category="case-study">
+                    <div class="article-header">
+                        <span class="article-type case-study">Case Study</span>
+                        <span class="article-year">XXXX</span>
+                    </div>
+                    <h3 class="article-title">Paper 2</h3>
+                    <div class="article-authors">
+                        <span>Author Name</span>
+                    </div>
+                    <p class="article-journal">Journal Name, Vol. XX, Issue X</p>
+                    <p class="article-abstract">
+                        Abstract text here...
+                    </p>
+                    <div class="article-meta">
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            </svg>
+                            XXX Citations
+                        </span>
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                            Open Access
+                        </span>
+                    </div>
+                    <div class="article-actions">
+                        <a href="#" class="btn btn-primary">View Abstract</a>
+                        <a href="#" class="btn btn-secondary">Download PDF</a>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="article-card" data-category="research">
+                    <div class="article-header">
+                        <span class="article-type research">Research Article</span>
+                        <span class="article-year">XXXX</span>
+                    </div>
+                    <h3 class="article-title">Paper 3</h3>
+                    <div class="article-authors">
+                        <span>Author Name</span>
+                    </div>
+                    <p class="article-journal">Journal Name, Vol. XX, Issue X</p>
+                    <p class="article-abstract">
+                        Abstract text here...
+                    </p>
+                    <div class="article-meta">
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            </svg>
+                            XXX Citations
+                        </span>
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                            Subscription
+                        </span>
+                    </div>
+                    <div class="article-actions">
+                        <a href="#" class="btn btn-primary">View Abstract</a>
+                        <a href="#" class="btn btn-secondary">Download PDF</a>
+                    </div>
+                </article>
+
+                <!-- Article Card 4 -->
+                <article class="article-card" data-category="review">
+                    <div class="article-header">
+                        <span class="article-type review">Systematic Review</span>
+                        <span class="article-year">XXXX</span>
+                    </div>
+                    <h3 class="article-title">Paper 4</h3>
+                    <div class="article-authors">
+                        <span>Author Name</span>
+                    </div>
+                    <p class="article-journal">Journal Name, Vol. XX, Issue X</p>
+                    <p class="article-abstract">
+                        Abstract text here...
+                    </p>
+                    <div class="article-meta">
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            </svg>
+                            XXX Citations
+                        </span>
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                            Open Access
+                        </span>
+                    </div>
+                    <div class="article-actions">
+                        <a href="#" class="btn btn-primary">View Abstract</a>
+                        <a href="#" class="btn btn-secondary">Download PDF</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="articles-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Collaborate with Us</h2>
+                <p>Interested in research collaboration or have questions about our publications? We welcome partnerships with academic institutions, healthcare organizations, and fellow street medicine programs.</p>
+                <div class="cta-buttons">
+                    <a href="Contact.html" class="btn btn-primary">Get in Touch</a>
+                    <a href="About us.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/streetmedicineatpitt/?hl=en" target="_blank" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="44" height="44">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/streetmedicineatpitt/" target="_blank" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+            </div>
+            <p>&copy; 2025 Street Medicine at Pitt. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/articles.js"></script>
+</body>
+</html>
