@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-       <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
             <a href="Home.html" class="logo">Street Medicine at Pitt</a>
@@ -49,11 +49,7 @@
         </div>
     </nav>
 
-
-    <!-- Overlay for mobile menu -->
-    <div class="mobile-nav-overlay"></div>
-
-    <!-- Hero Section with Background -->
+    <!-- Hero Section -->
     <section class="resources-hero">
         <div class="hero-background" style="background-image: url('Content/Resources/bd815a1f59d7d8b788eb5059463f5dab.jpg');"></div>
         <div class="hero-content">
@@ -62,171 +58,281 @@
         </div>
     </section>
 
-    <!-- Quick Links Section -->
-    <section class="quick-links-section">
+    <!-- Tab Navigation -->
+    <section class="resource-tabs">
         <div class="container">
-            <div class="quick-links-grid">
-                <a href="#emergency" class="quick-link-card">
-                    <div class="quick-link-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"/>
-                        </svg>
-                    </div>
-                    <h3>Emergency Services</h3>
-                </a>
-                <a href="#healthcare" class="quick-link-card">
-                    <div class="quick-link-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                        </svg>
-                    </div>
-                    <h3>Healthcare Access</h3>
-                </a>
-                <a href="#housing" class="quick-link-card">
-                    <div class="quick-link-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                            <polyline points="9 22 9 12 15 12 15 22"/>
-                        </svg>
-                    </div>
-                    <h3>Housing Support</h3>
-                </a>
-                <a href="#food" class="quick-link-card">
-                    <div class="quick-link-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
-                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-                            <line x1="6" y1="1" x2="6" y2="4"/>
-                            <line x1="10" y1="1" x2="10" y2="4"/>
-                            <line x1="14" y1="1" x2="14" y2="4"/>
-                        </svg>
-                    </div>
-                    <h3>Food Resources</h3>
-                </a>
+            <div class="tab-navigation">
+                <button class="tab-button active" data-tab="emergency">
+                    <span class="emoji">🚨</span><span class="text">Emergency</span>
+                </button>
+                <button class="tab-button" data-tab="shelters">
+                    <span class="emoji">🏠</span><span class="text">Shelters</span>
+                </button>
+                <button class="tab-button" data-tab="dropin">
+                    <span class="emoji">☕</span><span class="text">Drop-in</span>
+                </button>
+                <button class="tab-button" data-tab="healthcare">
+                    <span class="emoji">🏥</span><span class="text">Healthcare</span>
+                </button>
+                <button class="tab-button" data-tab="food">
+                    <span class="emoji">🍽️</span><span class="text">Food</span>
+                </button>
+                <button class="tab-button" data-tab="support">
+                    <span class="emoji">💬</span><span class="text">Support</span>
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Emergency Resources Section -->
-    <section class="resource-section" id="emergency">
+    <!-- Emergency Tab Content -->
+    <section class="tab-content active" id="emergency-tab">
         <div class="container">
-            <h2 class="section-title">Emergency Services</h2>
+            <h2 class="section-title">24/7 Emergency Services</h2>
             <div class="resource-cards">
                 <div class="resource-card emergency-card">
-                    <h3>Crisis Hotlines</h3>
+                    <h3>Immediate Crisis</h3>
                     <ul class="resource-list">
-                        <li><strong>abcdefg:</strong> abcdefg</li>
-                        <li><strong>abcdefg:</strong> abcdefg</li>
-                        <li><strong>abcdefg:</strong> abcdefg</li>
-                        <li><strong>abcdefg:</strong> abcdefg</li>
-                        <li><strong>abcdefg:</strong> abcdefg</li>
-                        <li><strong>abcdefg:</strong> abcdefg</li>
+                        <li>
+                            <strong>Emergency Services</strong>
+                            <span class="resource-details">📞 911<br>
+                            Medical, Police, Fire</span>
+                        </li>
+                        <li>
+                            <strong>Suicide & Crisis Lifeline</strong>
+                            <span class="resource-details">📞 988<br>
+                            24/7 Mental Health Support</span>
+                        </li>
+                        <li>
+                            <strong>Poison Control</strong>
+                            <span class="resource-details">📞 1-800-222-1222</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="resource-card emergency-card">
-                    <h3>Emergency Shelter</h3>
+                <div class="resource-card">
+                    <h3>Local Crisis Services</h3>
                     <ul class="resource-list">
-                        <li><strong>abcdefg:</strong> abcdefg</li>
-                        <li><strong>abcdefg:</strong> abcdefg<br>
-                        <span class="resource-details">abcdefg</span></li>
-                        <li><strong>abcdefg:</strong> abcdefg<br>
-                        <span class="resource-details">abcdefg</span></li>
-                        <li><strong>abcdefg:</strong> abcdefg<br>
-                        <span class="resource-details">abcdefg</span></li>
+                        <li>
+                            <strong>Resolve Crisis Services</strong>
+                            <span class="resource-details">📞 1-888-796-8226<br>
+                            📍 <a href="https://maps.google.com/?q=333+North+Braddock+Ave+Pittsburgh+PA+15208" target="_blank">333 North Braddock Ave</a><br>
+                            24/7 Crisis Support</span>
+                        </li>
+                        <li>
+                            <strong>Allegheny Link</strong>
+                            <span class="resource-details">📞 1-866-730-2368<br>
+                            Housing Crisis Support<br>
+                            🌐 <a href="https://www.alleghenycounty.us/Services/Housing/Allegheny-Link" target="_blank">Visit Allegheny Link Website</a></span>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Healthcare Resources Section -->
-    <section class="resource-section alt-bg" id="healthcare">
+    <!-- Shelters Tab Content -->
+    <section class="tab-content" id="shelters-tab">
         <div class="container">
-            <h2 class="section-title">Healthcare Access</h2>
+            <h2 class="section-title">Emergency Shelters</h2>
+            
+            <!-- Shelter Info Images -->
+            <div class="shelter-info-cards">
+                <img src="Content/Resources/Dropin_1.jpg" alt="Comprehensive Shelter List" class="info-card-img">
+                <img src="Content/Resources/dropin_2.jpg" alt="Shelters by Gender Identity" class="info-card-img">
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Shelters</button>
+                    <button class="filter-btn" data-filter="wheelchair">♿ Wheelchair Accessible</button>
+                    <button class="filter-btn" data-filter="youth">Youth (18-24)</button>
+                    <button class="filter-btn" data-filter="no-curfew">No Curfew</button>
+                </div>
+            </div>
+
+            <div class="resource-cards" id="shelter-cards">
+                <div class="resource-card shelter-item" data-wheelchair="yes" data-youth="no" data-curfew="yes">
+                    <h3>All Gender Shelters</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <strong>Second Avenue Commons</strong>
+                            <span class="resource-details">📍 <a href="https://maps.app.goo.gl/WUTxzTCraWisnhBL7" target="_blank">700 Second Avenue</a><br>
+                            📞 412-775-9001 (24/7)<br>
+                            <span class="wheelchair-tag">♿ Wheelchair accessible</span> • Walk-ins OK<br>
+                            ⏰ Curfew: 11:00 PM</span>
+                        </li>
+                        <li>
+                            <strong>East End Cooperative Ministry</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=6140+Station+Street+Pittsburgh+PA+15206" target="_blank">6140 Station Street, East Liberty</a><br>
+                            📞 412-345-7135<br>
+                            <span class="wheelchair-tag">♿ Wheelchair accessible</span><br>
+                            ⏰ Curfew: 6:00 PM</span>
+                        </li>
+                        <li data-youth="yes">
+                            <strong>FAMILY LINKS <span class="youth-tag">(Youth 18-24)</span></strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=1601+Fifth+Avenue+Pittsburgh+PA+15219" target="_blank">1601 Fifth Avenue, Uptown</a><br>
+                            📞 412-924-0494 (24/7)<br>
+                            <span class="wheelchair-tag">♿ Wheelchair accessible</span><br>
+                            ⏰ Curfew: 11:00 PM</span>
+                        </li>
+                        <li>
+                            <strong>McKeesport Downtown Housing</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=523+Sinclair+Street+McKeesport+PA+15132" target="_blank">523 Sinclair Street, McKeesport</a><br>
+                            📞 412-664-9168 (24/7)<br>
+                            <span class="wheelchair-tag">♿ Wheelchair accessible</span><br>
+                            <span class="no-curfew-tag">⏰ No Curfew</span></span>
+                        </li>
+                        <li>
+                            <strong>Team PSBG Low Barrier Shelter McKeesport</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=523+Sinclair+Street+McKeesport+PA+15132" target="_blank">523 Sinclair Street, Rear McKeesport</a><br>
+                            📞 724-244-6565 (24/7)<br>
+                            <span class="wheelchair-tag">♿ Wheelchair accessible</span><br>
+                            ⏰ Curfew: 10:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="resource-card shelter-item" data-wheelchair="yes" data-youth="no" data-curfew="yes">
+                    <h3>Gender-Specific Shelters</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <strong>Bethlehem Haven (Women/Trans/NB)</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=903+Watson+Street+Pittsburgh+PA+15219" target="_blank">903 Watson Street</a><br>
+                            📞 412-389-9702 (24/7)<br>
+                            <span class="wheelchair-tag">♿ Wheelchair accessible</span><br>
+                            ⏰ Curfew: 10:00 PM (exceptions for special circumstances)</span>
+                        </li>
+                        <li>
+                            <strong>Light of Life (Men/Trans/NB)</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=234+Voeghtly+Street+Pittsburgh+PA+15212" target="_blank">234 Voeghtly St, Northside</a><br>
+                            📞 412-803-4120 (24/7)<br>
+                            <span class="wheelchair-tag">♿ Wheelchair accessible</span><br>
+                            ⏰ Curfew: 6:30 PM</span>
+                        </li>
+                        <li>
+                            <strong>Pleasant Valley (Men/NB)</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=1601+Brighton+Road+Pittsburgh+PA+15212" target="_blank">1601 Brighton Rd, Northside</a><br>
+                            📞 412-321-4272<br>
+                            <span class="wheelchair-tag">♿ Wheelchair accessible</span><br>
+                            ⏰ Curfew: 7:30 PM (exceptions for employment)</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="resource-card shelter-item" data-wheelchair="no" data-youth="no" data-curfew="no">
+                    <h3>Veterans Shelter</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <strong>Project Journey (Veterans Only)</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=2934+Smallman+Street+Pittsburgh+PA+15201" target="_blank">2934 Smallman St, Strip District</a><br>
+                            📞 844-VLP-VETS<br>
+                            Walk-in or online: <a href="https://www.neverforgetvets.org" target="_blank">neverforgetvets.org</a><br>
+                            <span class="no-curfew-tag">⏰ No Curfew</span></span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="resource-card">
+                    <h3>Domestic Violence Shelters</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <strong>Alle-Kiski Hope Center</strong>
+                            <span class="resource-details">📞 1-888-299-4673<br>
+                            *Serves anyone regardless of identified gender</span>
+                        </li>
+                        <li>
+                            <strong>Center for Victims</strong>
+                            <span class="resource-details">📞 1-866-644-2882<br>
+                            *Serves anyone regardless of identified gender</span>
+                        </li>
+                        <li>
+                            <strong>Women's Center and Shelter</strong>
+                            <span class="resource-details">📞 412-687-8005<br>
+                            *Serves anyone regardless of identified gender</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drop-in Centers Tab Content -->
+    <section class="tab-content" id="dropin-tab">
+        <div class="container">
+            <h2 class="section-title">Drop-in & Engagement Centers</h2>
+            
+            <!-- Drop-in Info Images -->
+            <div class="dropin-info-cards">
+                <img src="Content/Resources/dropin_3.jpg" alt="Drop-in Centers List" class="info-card-img">
+                <img src="Content/Resources/dropin_4.jpg" alt="Drop-in Centers Services" class="info-card-img">
+            </div>
+
             <div class="resource-cards">
                 <div class="resource-card">
-                    <h3>Free & Low-Cost Clinics</h3>
+                    <h3>Day Centers - Open to All</h3>
                     <ul class="resource-list">
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>Pittsburgh Mercy 2AC Center</strong>
+                            <span class="resource-details">📍 <a href="https://maps.app.goo.gl/WUTxzTCraWisnhBL7" target="_blank">700 Second Avenue</a><br>
+                            📞 412-775-9001<br>
+                            ⏰ Daily 7am-7pm • Overnight 5pm-8am<br>
+                            ♿ Wheelchair accessible<br>
+                            Services: Meals, Showers, Laundry, Computers, Medical</span>
                         </li>
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>412 Youth Zone (Ages 16-23)</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=304+Wood+Street+Pittsburgh+PA" target="_blank">304 Wood St, 6th Floor</a><br>
+                            📞 412-902-4068<br>
+                            ⏰ M-F: 12pm-5pm (T/TH until 6:30pm), Sat: By appointment<br>
+                            Services: Meals, Showers, Laundry, Lockers, Toiletries, Social Support</span>
                         </li>
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>Unity Recovery Center</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=801+Bingham+Street+Pittsburgh+PA+15203" target="_blank">801 Bingham St, Southside</a><br>
+                            📞 412-586-5372<br>
+                            ⏰ 7 days/week 5pm-8am<br>
+                            Services: Snacks, Showers, Clothing</span>
                         </li>
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>Jubilee Kitchen</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=2005+Wyandotte+Street+Pittsburgh+PA+15219" target="_blank">2005 Wyandotte St, Uptown</a><br>
+                            📞 412-261-5417<br>
+                            ⏰ Daily 6:30am-1pm (3pm on Code Blue)<br>
+                            Services: Breakfast, Lunch, To-go Dinner, Showers, Groceries</span>
                         </li>
                     </ul>
                 </div>
                 <div class="resource-card">
-                    <h3>Mental Health Services</h3>
+                    <h3>Specialized Centers</h3>
                     <ul class="resource-list">
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>Veteran's Place (Veterans Only)</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=945+Washington+Blvd+Pittsburgh+PA" target="_blank">945 Washington Blvd, Homewood</a><br>
+                            📞 412-363-0500<br>
+                            ⏰ M-F: 8am-3pm<br>
+                            Services: Meals, Showers, Laundry, Counseling, Computers</span>
                         </li>
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>Light of Life</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=234+Voeghtly+Street+Pittsburgh+PA+15212" target="_blank">234 Voeghtly St, Northside</a><br>
+                            📞 412-398-7373<br>
+                            ⏰ M-F: 9am-4pm<br>
+                            Services: Meals, Limited Showers</span>
                         </li>
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>Pleasant Valley (Men Only)</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=1601+Brighton+Road+Pittsburgh+PA+15212" target="_blank">1601 Brighton Road, Northside</a><br>
+                            📞 412-321-4272<br>
+                            ⏰ M-F: 9am-11am (Limited)<br>
+                            Services: Limited services available</span>
                         </li>
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="resource-card">
-                    <h3>Substance Use Support</h3>
-                    <ul class="resource-list">
-                        <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
-                        </li>
-                        <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
-                        </li>
-                        <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
-                        </li>
-                        <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg</span>
+                            <strong>Proud Haven QMNTY Center & YOUth Drop In</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=525+East+Ohio+Street+Pittsburgh+PA" target="_blank">525 East Ohio St, Northside</a><br>
+                            📞 412-346-1324<br>
+                            ⏰ YOUth: M-F 12-6pm | QMNTY: M-F 6-10pm<br>
+                            LGBTQIA+ All ages<br>
+                            Services: Light Snacks, Social Support, Counseling, Medical</span>
                         </li>
                     </ul>
                 </div>
@@ -234,60 +340,32 @@
         </div>
     </section>
 
-    <!-- Housing Resources Section -->
-    <section class="resource-section" id="housing">
+    <!-- Healthcare Tab Content -->
+    <section class="tab-content" id="healthcare-tab">
         <div class="container">
-            <h2 class="section-title">Housing Support</h2>
+            <h2 class="section-title">Healthcare Services</h2>
             <div class="resource-cards">
                 <div class="resource-card">
-                    <h3>Housing Assistance Programs</h3>
+                    <h3>Free & Low-Cost Medical Care</h3>
                     <ul class="resource-list">
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>Birmingham Free Clinic</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=1515+Locust+St+Suite+705+Pittsburgh+PA+15219" target="_blank">1515 Locust St, Suite 705</a><br>
+                            📞 412-246-3053<br>
+                            Free care for uninsured adults • By appointment only</span>
                         </li>
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>Operation Safety Net (Street Medicine)</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=249+South+9th+Street+Pittsburgh+PA+15203" target="_blank">249 South 9th St, 2nd Floor</a><br>
+                            📞 412-240-7366<br>
+                            Street medicine outreach • Medical care where people are</span>
                         </li>
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
-                        </li>
-                        <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="resource-card">
-                    <h3>Day Centers & Drop-in Services</h3>
-                    <ul class="resource-list">
-                        <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
-                        </li>
-                        <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
-                        </li>
-                        <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>UPMC 2AC Health Clinic at DHS</strong>
+                            <span class="resource-details">📍 <a href="https://maps.app.goo.gl/WUTxzTCraWisnhBL7" target="_blank">700 Second Avenue</a><br>
+                            📞 412-232-7544<br>
+                            ⏰ M, W, F: 12pm-4pm<br>
+                            Services: Treatment of chronic diseases (diabetes, high blood pressure, COPD), wound care, MAT & substance use disorder treatment, behavioral health assessment & linkage to care, linkage to primary care, eye glasses</span>
                         </li>
                     </ul>
                 </div>
@@ -295,61 +373,35 @@
         </div>
     </section>
 
-    <!-- Food Resources Section -->
-    <section class="resource-section alt-bg" id="food">
+    <!-- Food Tab Content -->
+    <section class="tab-content" id="food-tab">
         <div class="container">
             <h2 class="section-title">Food Resources</h2>
             <div class="resource-cards">
                 <div class="resource-card">
-                    <h3>Community Meal Programs</h3>
+                    <h3>Community Meals</h3>
                     <ul class="resource-list">
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>Red Door Ministry</strong>
+                            <span class="resource-details">📍 <a href="https://maps.app.goo.gl/BHANcu7gQKsMwXJg7" target="_blank">202 Stanwix St</a><br>
+                            Regular meal service</span>
                         </li>
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>Shepherd's Heart Church</strong>
+                            <span class="resource-details">📍 <a href="https://maps.app.goo.gl/rU52ehCraTEgZ6nm7" target="_blank">13 Pride St</a><br>
+                            Breakfast service</span>
                         </li>
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>Jubilee Kitchen</strong>
+                            <span class="resource-details">📍 <a href="https://maps.google.com/?q=2005+Wyandotte+Street+Pittsburgh+PA+15219" target="_blank">2005 Wyandotte St, Uptown</a><br>
+                            📞 412-261-5417<br>
+                            Breakfast, Lunch, To-go Dinner daily</span>
                         </li>
                         <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="resource-card">
-                    <h3>Food Pantries & Banks</h3>
-                    <ul class="resource-list">
-                        <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
-                        </li>
-                        <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
-                        </li>
-                        <li>
-                            <strong>abcdefg</strong><br>
-                            <span class="resource-details">abcdefg<br>
-                            abcdefg<br>
-                            abcdefg</span>
+                            <strong>Greater Pittsburgh Food Bank</strong>
+                            <span class="resource-details">📍 <a href="https://maps.app.goo.gl/dQBZrFbuHm6zFpgy5" target="_blank">1 N Linden St</a><br>
+                            📞 412-460-3663<br>
+                            🌐 <a href="https://findfood.pittsburghfoodbank.org/" target="_blank">Find food locations online</a></span>
                         </li>
                     </ul>
                 </div>
@@ -357,86 +409,46 @@
         </div>
     </section>
 
-    <!-- Additional Resources Section -->
-    <section class="additional-resources">
+    <!-- Support Services Tab Content -->
+    <section class="tab-content" id="support-tab">
         <div class="container">
             <h2 class="section-title">Additional Support Services</h2>
             <div class="additional-grid">
                 <div class="additional-card">
-                    <h3>Legal Assistance</h3>
-                    <p><strong>abcdefg</strong><br>
-                    abcdefg<br>
-                    abcdefg</p>
-                    <p style="margin-top: 10px;"><strong>abcdefg</strong><br>
-                    abcdefg<br>
-                    abcdefg</p>
+                    <h3>Legal Aid</h3>
+                    <p><strong>Public Defender</strong><br>
+                    <a href="https://maps.google.com/?q=542+Forbes+Ave+Pittsburgh+PA+15219" target="_blank">542 Forbes Ave</a></p>
+                    <p><strong>Neighborhood Legal Services</strong><br>
+                    📞 866-761-6572</p>
                 </div>
                 <div class="additional-card">
-                    <h3>Transportation</h3>
-                    <p><strong>abcdefg</strong><br>
-                    abcdefg<br>
-                    abcdefg</p>
-                    <p style="margin-top: 10px;"><strong>abcdefg</strong><br>
-                    abcdefg<br>
-                    abcdefg</p>
+                    <h3>Harm Reduction</h3>
+                    <p><strong>Prevention Point Pittsburgh</strong><br>
+                    Multiple mobile locations - Open different days:</p>
+                    <ul style="list-style: none; padding: 0; font-size: 13px;">
+                        <li><strong>Sunday</strong>: East Liberty - <a href="https://maps.google.com/?q=5913+Penn+Ave+Pittsburgh+PA+15206" target="_blank">5913 Penn Ave</a> (12-3pm)</li>
+                        <li><strong>Tuesday</strong>: Perry Hilltop - N. Charles St & Perrysville Ave (1-4pm)</li>
+                        <li><strong>Wednesday</strong>: Hill District - Bentley Dr & Kirkpatrick St (1-4pm)</li>
+                        <li><strong>Thursday</strong>: Carrick - <a href="https://maps.google.com/?q=2415+Saw+Mill+Run+Blvd+Pittsburgh+PA" target="_blank">2415 Saw Mill Run Blvd</a> (12-3pm)</li>
+                        <li><strong>Friday</strong>: Homewood - <a href="https://maps.google.com/?q=7240+Frankstown+Ave+Pittsburgh+PA" target="_blank">7240 Frankstown Ave</a> (1-4pm)</li>
+                    </ul>
+                    <p><strong>Bridge Outreach</strong><br>
+                    📞 412-699-0462</p>
                 </div>
                 <div class="additional-card">
-                    <h3>Employment Services</h3>
-                    <p><strong>abcdefg</strong><br>
-                    abcdefg<br>
-                    abcdefg</p>
-                    <p style="margin-top: 10px;"><strong>abcdefg</strong><br>
-                    abcdefg<br>
-                    abcdefg</p>
+                    <h3>ID Support</h3>
+                    <p><strong>Birth Certificates</strong><br>
+                    Free through 2AC/DHS Link</p>
+                    <p><strong>State ID Waiver</strong><br>
+                    Available at shelters</p>
                 </div>
                 <div class="additional-card">
-                    <h3>Identification & Documents</h3>
-                    <p><strong>abcdefg</strong><br>
-                    abcdefg<br>
-                    abcdefg</p>
-                    <p style="margin-top: 10px;"><strong>abcdefg</strong><br>
-                    abcdefg<br>
-                    abcdefg</p>
+                    <h3>Street Outreach</h3>
+                    <p><strong>ROOTs Program</strong><br>
+                    Contact Allegheny Link for connection</p>
+                    <p><strong>Central Outreach Wellness Center</strong><br>
+                    Multiple locations throughout Pittsburgh</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Educational Resources Section -->
-    <section class="download-section">
-        <div class="container">
-            <h2 class="section-title">Educational Resources & Training</h2>
-            <div class="download-grid">
-                <a href="https://nhchc.org/clinical-practice/homeless-services/" target="_blank" class="download-card">
-                    <div class="download-icon">📚</div>
-                    <h3>HCH (Health Care for the Homeless) Resources</h3>
-                    <p>Comprehensive clinical practice guidelines and best practices for street medicine and homeless services from the National Health Care for the Homeless Council</p>
-                </a>
-                <a href="https://www.samhsa.gov/homelessness-programs-resources" target="_blank" class="download-card">
-                    <div class="download-icon">🩺</div>
-                    <h3>Trauma-Informed Care Resources</h3>
-                    <p>abcdefg</p>
-                </a>
-                <a href="https://streetmedicine.org/" target="_blank" class="download-card">
-                    <div class="download-icon">🌐</div>
-                    <h3>Street Medicine Institute</h3>
-                    <p>abcdefg</p>
-                </a>
-                <a href="https://www.alleghenycounty.us/Human-Services/Resources/Doing-Business/Homeless-Services.aspx" target="_blank" class="download-card">
-                    <div class="download-icon">📋</div>
-                    <h3>Allegheny County Resources</h3>
-                    <p>abcdefg</p>
-                </a>
-                <a href="https://www.hudexchange.info/homelessness-assistance/" target="_blank" class="download-card">
-                    <div class="download-icon">🏠</div>
-                    <h3>HUD Homeless Assistance</h3>
-                    <p>abcdefg</p>
-                </a>
-                <a href="https://ppppgh.org/" target="_blank" class="download-card">
-                    <div class="download-icon">💊</div>
-                    <h3>Harm Reduction Resources</h3>
-                    <p>abcdefg</p>
-                </a>
             </div>
         </div>
     </section>
@@ -463,5 +475,6 @@
     <!-- JavaScript Files -->
     <script src="js/navbar.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/resources.js"></script>
 </body>
 </html>
