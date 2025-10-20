@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Team Member Cards Hover Effect
-    const teamMembers = document.querySelectorAll('.board-member, .liaison-member');
+    const teamMembers = document.querySelectorAll('.board-member, .liaison-member, .documentation-member, .volunteer-member, .education-member, .research-member .resource-member');
     
     teamMembers.forEach(member => {
         member.addEventListener('mouseenter', function() {
