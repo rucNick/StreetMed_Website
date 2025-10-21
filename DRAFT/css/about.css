@@ -1,5 +1,5 @@
 /* ================================================
-   ABOUT US PAGE STYLES
+   ABOUT US PAGE STYLES - COMPLETE VERSION
    ================================================ */
 
 /* Hero Image Section */
@@ -219,6 +219,13 @@
     padding-bottom: 10px;
 }
 
+/* Container for centering content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* ================================================
    TEAM GRID LAYOUTS
    ================================================ */
@@ -234,6 +241,7 @@
 
 .board-member {
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .board-member .member-image {
@@ -277,6 +285,7 @@
 
 .liaison-member {
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .liaison-member .member-image {
@@ -288,10 +297,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .liaison-member .member-image.placeholder {
     background: #e0e0e0;
+}
+
+.liaison-member .member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .liaison-member .member-image svg {
@@ -326,6 +342,7 @@
 
 .documentation-member {
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .documentation-member .member-image {
@@ -342,6 +359,12 @@
 
 .documentation-member .member-image.placeholder {
     background: #e0e0e0;
+}
+
+.documentation-member .member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .documentation-member .member-image svg {
@@ -376,6 +399,7 @@
 
 .resource-member {
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .resource-member .member-image {
@@ -394,6 +418,12 @@
     background: #e0e0e0;
 }
 
+.resource-member .member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .resource-member .member-image svg {
     width: 55px;
     height: 55px;
@@ -409,6 +439,120 @@
 }
 
 .resource-member p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Events & Education Grid - 4 columns */
+.events-education-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.events-education-member {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.events-education-member .member-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 12px;
+    background: #d8dee4;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.events-education-member .member-image.placeholder {
+    background: #e0e0e0;
+}
+
+.events-education-member .member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.events-education-member .member-image svg {
+    width: 55px;
+    height: 55px;
+    color: #999;
+}
+
+.events-education-member h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 3px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.events-education-member p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Research Grid - 5 columns */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.research-member {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.research-member .member-image {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 12px;
+    background: #d8dee4;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.research-member .member-image.placeholder {
+    background: #e0e0e0;
+}
+
+.research-member .member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.research-member .member-image svg {
+    width: 60px;
+    height: 60px;
+    color: #999;
+}
+
+.research-member h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 3px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.research-member p {
     font-size: 13px;
     color: #666;
     margin: 0;
@@ -513,6 +657,43 @@
     box-shadow: 0 6px 20px rgba(255, 184, 28, 0.4);
 }
 
+/* Footer Styles */
+footer {
+    background: #001f54;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+footer .social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-links a:hover {
+    transform: translateY(-3px);
+}
+
+footer .social-links img,
+footer .social-links svg {
+    width: 100%;
+    height: 100%;
+}
+
+footer p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
 /* ================================================
    ANIMATIONS
    ================================================ */
@@ -572,6 +753,23 @@
     .resource-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+
+    /* Events & Education Grid - 2 columns on tablet */
+    .events-education-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Research Grid - 3 columns on tablet */
+    .research-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .research-member .member-image {
+        width: 120px;
+        height: 120px;
     }
 
     .schools-grid {
@@ -675,6 +873,38 @@
     }
 
     .resource-member .member-image svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Events & Education Grid - 2 columns on mobile */
+    .events-education-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .events-education-member .member-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .events-education-member .member-image svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Research Grid - 2 columns on mobile */
+    .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .research-member .member-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .research-member .member-image svg {
         width: 45px;
         height: 45px;
     }
