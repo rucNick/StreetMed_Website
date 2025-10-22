@@ -1,4 +1,4 @@
-## Project Setup and Development 🚀
+## Project Setup and Development 
 
 This guide outlines the commands needed to run the project's development server and automatically rebuild assets during development.
 
