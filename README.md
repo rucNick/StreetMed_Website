@@ -4,7 +4,7 @@ This guide outlines the commands needed to run the project's development server 
 
 ---
 
-### Running the Development Server
+### 1. Running the Development Server
 
 Start a simple Python HTTP server to host the project files from the `public` directory.
 
@@ -17,7 +17,7 @@ Your project will be accessible in a web browser at:
 
 ---
 
-### Automated Asset Rebuilding (Watch Mode)
+### 2. Automated Asset Rebuilding (Watch Mode)
 
 Use **nodemon** to monitor your source files for changes and automatically trigger a build whenever a save occurs.
 
@@ -27,7 +27,7 @@ npx nodemon --watch DRAFT --ext html,css,js --delay 200ms --exec "npm run build"
 
 ---
 
-### Installation Note
+### 3. Installation Note
 
 If **nodemon** isn’t installed globally, `npx nodemon` may prompt you to install it locally.  
 Type `y` and press **Enter** to confirm installation when prompted.
