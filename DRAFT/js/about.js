@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
         timelineObserver.observe(item);
     });
 
-    // Team Member Cards Hover Effect
-    const teamMembers = document.querySelectorAll('.board-member, .liaison-member, .documentation-member, .volunteer-member, .education-member, .research-member .resource-member');
+    // Team Member Cards Hover Effect - FIXED
+    const teamMembers = document.querySelectorAll('.board-member, .liaison-member, .documentation-member, .volunteer-member, .education-member, .research-member, .resource-member, .events-education-member');
     
     teamMembers.forEach(member => {
         member.addEventListener('mouseenter', function() {
