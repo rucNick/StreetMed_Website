@@ -1,8 +1,13 @@
 /* ================================================
-   EVENTS PAGE JAVASCRIPT
+   EVENTS PAGE JAVASCRIPT - (CALENDAR DISABLED)
    ================================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
+    /* ====================================================
+       CALENDAR FUNCTIONALITY - TEMPORARILY DISABLED
+       ==================================================== */
+    
+    /*
     // Calendar functionality
     let currentMonth = new Date().getMonth();
     let currentYear = new Date().getFullYear();
@@ -12,10 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
         "July", "August", "September", "October", "November", "December"
     ];
     
-    // Sample events data (in production, this would come from a database)
+    // Enhanced events data with all the events from your HTML
     const events = {
-        '2025-1-4': { type: 'street-rounds', title: 'Downtown Street Rounds' },
-        '2025-1-5': { type: 'street-rounds', title: 'East Liberty Street Rounds' },
+        // Regular weekly street rounds (weekends)
+        '2025-10-25': { type: 'street-rounds', title: 'Saturday Street Rounds' },
     };
     
     function generateCalendar(month, year) {
@@ -24,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Clear existing calendar days (keep headers)
         const dayHeaders = calendarGrid.querySelectorAll('.calendar-day-header');
-        calendarGrid.innerHTML = '';
-        dayHeaders.forEach(header => calendarGrid.appendChild(header));
+        const existingDays = calendarGrid.querySelectorAll('.calendar-day');
+        existingDays.forEach(day => day.remove());
         
         // Update month/year display
         const monthYearElement = document.querySelector('.calendar-month-year');
@@ -80,6 +85,17 @@ document.addEventListener('DOMContentLoaded', function() {
         if (events[dateKey] && !isOtherMonth) {
             dayElement.classList.add('has-event', events[dateKey].type);
             dayElement.setAttribute('title', events[dateKey].title);
+            dayElement.style.cursor = 'pointer';
+        }
+        
+        // Also check for weekend street rounds
+        const date = new Date(year, month, day);
+        const dayOfWeek = date.getDay();
+        if ((dayOfWeek === 0 || dayOfWeek === 6) && !isOtherMonth && !events[dateKey]) {
+            // Add default weekend street rounds if not already an event
+            dayElement.classList.add('has-event', 'street-rounds');
+            dayElement.setAttribute('title', `${dayOfWeek === 0 ? 'Sunday' : 'Saturday'} Street Rounds`);
+            dayElement.style.cursor = 'pointer';
         }
         
         const dayNumber = document.createElement('div');
@@ -88,9 +104,14 @@ document.addEventListener('DOMContentLoaded', function() {
         dayElement.appendChild(dayNumber);
         
         // Add click event for days with events
-        if (events[dateKey] && !isOtherMonth) {
+        if ((events[dateKey] || (dayOfWeek === 0 || dayOfWeek === 6)) && !isOtherMonth) {
             dayElement.addEventListener('click', function() {
-                showEventDetails(events[dateKey], day, month, year);
+                const eventDetails = events[dateKey] || {
+                    title: `${dayOfWeek === 0 ? 'Sunday' : 'Saturday'} Street Rounds`,
+                    type: 'street-rounds',
+                    description: 'Weekly street rounds to provide care and support to individuals experiencing homelessness.'
+                };
+                showEventDetails(eventDetails, day, month, year);
             });
         }
         
@@ -98,8 +119,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function showEventDetails(event, day, month, year) {
-        // In production, this would show a modal or navigate to event details
-        alert(`${event.title} on ${monthNames[month]} ${day}, ${year}`);
+        // Simple alert for now - you can enhance this to a modal later
+        const message = `${event.title}\n${monthNames[month]} ${day}, ${year}${event.description ? '\n\n' + event.description : ''}`;
+        alert(message);
     }
     
     // Navigation functions
@@ -123,55 +145,101 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize calendar
     generateCalendar(currentMonth, currentYear);
+    */
     
-    // Load more past events functionality
-    window.loadMoreEvents = function() {
-        const grid = document.querySelector('.past-events-grid');
-        const button = document.querySelector('.view-more-section button');
+    /* ====================================================
+       END OF CALENDAR SECTION
+       ==================================================== */
+    
+    
+    /* ====================================================
+       PAST EVENTS SHOW/HIDE FUNCTIONALITY
+       ==================================================== */
+    
+    // Hide past events beyond the first 6 on initial load
+    function initializePastEvents() {
+        const allPastEventCards = document.querySelectorAll('.past-events-grid .past-event-card');
         
-        if (!grid || !button) return;
-        
-        // Sample additional events (in production, this would be an API call)
-        const moreEvents = [
-                // future implemented
-        ];
-        
-        // Add new event cards
-        moreEvents.forEach(event => {
-            const card = createPastEventCard(event);
-            grid.appendChild(card);
+        // Hide all cards after the 6th one
+        allPastEventCards.forEach((card, index) => {
+            if (index >= 6) {
+                card.style.display = 'none';
+                card.classList.add('hidden-event');
+            }
         });
         
-        // Update button text
-        button.textContent = 'All Events Loaded';
-        button.disabled = true;
-        button.style.opacity = '0.6';
-    };
-    
-    function createPastEventCard(event) {
-        const card = document.createElement('div');
-        card.className = 'past-event-card';
-        
-        card.innerHTML = `
-            <div class="past-event-image">
-                <img src="Events/placeholder.jpg" alt="${event.title}">
-                <div class="event-overlay">
-                    <span class="event-date-overlay">${event.date}</span>
-                </div>
-            </div>
-            <div class="past-event-content">
-                <h3>${event.title}</h3>
-                <p>${event.description}</p>
-                <div class="event-stats">
-                    ${Object.entries(event.stats).map(([key, value]) => 
-                        `<span class="stat"><strong>${value}</strong> ${key}</span>`
-                    ).join('')}
-                </div>
-            </div>
-        `;
-        
-        return card;
+        // Setup the View More button
+        const viewMoreBtn = document.querySelector('.view-more-section button');
+        if (viewMoreBtn && allPastEventCards.length > 6) {
+            viewMoreBtn.style.display = 'inline-block';
+            
+            // Remove any existing click handlers
+            viewMoreBtn.onclick = null;
+            
+            // Add new click handler
+            viewMoreBtn.addEventListener('click', function() {
+                showMorePastEvents();
+            });
+        } else if (viewMoreBtn) {
+            // Hide button if there are 6 or fewer events
+            viewMoreBtn.style.display = 'none';
+        }
     }
+    
+    // Function to show more past events
+    function showMorePastEvents() {
+        const hiddenEvents = document.querySelectorAll('.past-event-card.hidden-event');
+        const viewMoreBtn = document.querySelector('.view-more-section button');
+        
+        // Show all hidden events with animation
+        hiddenEvents.forEach((card, index) => {
+            setTimeout(() => {
+                card.style.display = 'block';
+                card.classList.remove('hidden-event');
+                
+                // Add animation
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 50);
+            }, index * 100); // Stagger the animation
+        });
+        
+        // Update button after all events are shown
+        if (viewMoreBtn) {
+            setTimeout(() => {
+                viewMoreBtn.textContent = 'All Events Loaded';
+                viewMoreBtn.disabled = true;
+                viewMoreBtn.style.opacity = '0.6';
+                viewMoreBtn.style.cursor = 'not-allowed';
+            }, hiddenEvents.length * 100);
+        }
+    }
+    
+    // Initialize past events display
+    initializePastEvents();
+    
+    
+    /* ====================================================
+       IMAGE ERROR HANDLING
+       ==================================================== */
+    
+    // Fix missing placeholder images
+    document.querySelectorAll('.past-event-image img').forEach(img => {
+        img.addEventListener('error', function() {
+            // Replace with a base64 SVG placeholder
+            this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTBlMGUwIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkV2ZW50IEltYWdlPC90ZXh0Pgo8L3N2Zz4=';
+        });
+    });
+    
+    
+    /* ====================================================
+       SMOOTH SCROLL FUNCTIONALITY
+       ==================================================== */
     
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -190,8 +258,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    
+    /* ====================================================
+       ANIMATION ON SCROLL
+       ==================================================== */
+    
     // Intersection Observer for animations
-    const animateElements = document.querySelectorAll('.event-card, .past-event-card');
+    const animateElements = document.querySelectorAll('.event-card, .past-event-card:not(.hidden-event)');
     
     const animateObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -207,11 +280,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     animateElements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        animateObserver.observe(element);
+        if (!element.classList.contains('hidden-event')) {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            animateObserver.observe(element);
+        }
     });
+    
+    
+    /* ====================================================
+       HOVER EFFECTS
+       ==================================================== */
     
     // Add hover effects to event buttons
     const eventButtons = document.querySelectorAll('.event-btn');
@@ -224,19 +304,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateX(0)';
         });
     });
-    
-    // Calendar day hover effect
-    const calendarDays = document.querySelectorAll('.calendar-day.has-event');
-    calendarDays.forEach(day => {
-        day.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05)';
-        });
-        
-        day.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-    });
 });
+
+
+/* ====================================================
+   UTILITY FUNCTIONS
+   ==================================================== */
 
 // Utility function for date formatting
 function formatDate(date) {
