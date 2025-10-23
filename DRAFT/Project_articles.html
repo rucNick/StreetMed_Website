@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Articles - Street Medicine at Pitt</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Lato:wght@300;400;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/projects-articles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="Home.html" class="logo">Street Medicine at Pitt</a>
+            <button type="button" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="navMenu">
+                <li class="has-submenu">
+                    <a href="javascript:void(0)">Home</a>
+                    <ul class="submenu">
+                        <li><a href="About us.html">About Us</a></li>
+                        <li><a href="Resources.html">Resources</a></li>
+                        <li><a href="Projects-Articles.html">Projects & Articles</a></li>
+                    </ul>
+                </li>
+                <li><a href="Events.html">Events & Calendar</a></li>
+                <li><a href="Donate.html">Donate</a></li>
+                <li class="has-submenu">
+                    <a href="javascript:void(0)">Volunteer</a>
+                    <ul class="submenu">
+                        <li><a href="Get Involed.html">Get Involved</a></li>
+                        <li><a href="Volunteer.html">Street Rounds</a></li>
+                    </ul>
+                </li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Overlay for mobile menu -->
+    <div class="mobile-nav-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="page-title">Projects & Articles</h1>
+            <p class="page-subtitle">Our ongoing research initiatives and media coverage</p>
+        </div>
+    </section>
+
+    <!-- Tab Navigation -->
+    <section class="tab-navigation">
+        <div class="container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="projects">Ongoing Projects</button>
+                <button class="tab-btn" data-tab="articles">News & Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ongoing Projects Section -->
+    <section id="projects" class="tab-content active">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ongoing Research Projects</h2>
+                <p class="section-description">
+                    Street Medicine at Pitt is committed to advancing the field through innovative engineering solutions 
+                    and interprofessional education. Our ongoing projects focus on improving the quality of life for people 
+                    experiencing homelessness while training the next generation of healthcare professionals.
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                
+                <!-- Project Card 1: Noise Exposure -->
+                <article class="project-card">
+                    <div class="project-poster">
+                        <img src="Content/Project_articles/Projects/Decreasing Effectsof Prolonged Noise Exposure.jpg" 
+                             alt="Decreasing Effects of Prolonged Noise Exposure in Homeless Encampments - Research Poster">
+                        <div class="project-poster-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-status">Active Research</span>
+                        </div>
+                        <h3 class="project-title">Decreasing Effects of Prolonged Noise Exposure in Homeless Encampments</h3>
+                        <div class="project-lead">
+                            <span class="label">Project Team:</span>
+                            <span>Ella Jones, Amechi Oruwari, Sean Springer, Colin Henchy</span>
+                        </div>
+                        <div class="project-lead">
+                            <span class="label">Faculty Advisor:</span>
+                            <span>Dr. Lee Fisher, Street Medicine at Pitt</span>
+                        </div>
+                        <p class="project-description">
+                            University of Pittsburgh Swanson School of Engineering's senior design class worked with Street Medicine at Pitt 
+                            to create a project that aims to provide aid to the residents of a Pittsburgh-area homeless encampment 
+                            located alongside an interstate. Sound levels along high-traffic areas can reach as high as 95 dB, with 
+                            hearing damage occurring at prolonged exposure of 85 dB or above. The team developed a 3 ft x 6 ft 
+                            sound panel using Helmholtz resonators built into the interior of the panel to decrease ambient sound 
+                            below 85 dB, targeting low frequencies (550, 1000, and 1500 Hz) prevalent in traffic noise.
+                        </p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 11l3 3L22 4"></path>
+                                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                </svg>
+                                <span>Goal: Reduce sound below 85 dB</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>Status: Prototype Completed</span>
+                            </div>
+                        </div>
+                        <div class="project-highlights">
+                            <h4>Key Achievements</h4>
+                            <ul>
+                                <li>Successfully lowered sound levels above 85 dB to below threshold</li>
+                                <li>Achieved over 20 dB reduction when the barrier was in place</li>
+                                <li>Lightweight, durable, and user-friendly design</li>
+                                <li>Low-cost solution under $300</li>
+                                <li>Size: approximately 3 ft x 6 ft panel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 2: Interprofessional Education -->
+                <article class="project-card">
+                    <div class="project-poster">
+                        <img src="Content/Project_articles/Projects/Interprofessional Education Experiences in Homeless Healthcare.jpg" 
+                             alt="Interprofessional Education Experiences in Homeless Healthcare - Research Poster">
+                        <div class="project-poster-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-status">Active Research</span>
+                        </div>
+                        <h3 class="project-title">Interprofessional Education Experiences in Homeless Healthcare</h3>
+                        <div class="project-lead">
+                            <span class="label">Research Team:</span>
+                            <span>Rosemary Sabatino MS, Jatin Singh NRP, Max Hurwitz DO</span>
+                        </div>
+                        <div class="project-lead">
+                            <span class="label">Faculty Leads:</span>
+                            <span>Anna Marie White MD, Caroline Passerrello EdD, RDN, LDN</span>
+                        </div>
+                        <p class="project-description">
+                            This innovative study examines experiential learning for paramedic and dietitian-nutritionist students through 
+                            Street Medicine at Pitt (SMAP) rounds. Interprofessional education (IPE) remains a cornerstone of clinical 
+                            education for all healthcare professionals aiming for high quality patient care. The research evaluates how 
+                            IPE transforms students' understanding of homeless healthcare delivery, clinical collaboration, and 
+                            patient-centered care. Two School of Health and Rehabilitation Sciences (SHRS) programs—Emergency Medicine 
+                            (EM) and the Dietitian-Nutritionist Program (DNP)—participated in street medicine rounds during the 
+                            2023-2024 academic year.
+                        </p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>27 Students (12 EM + 15 DNP)</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>24+ Health Disciplines Involved</span>
+                            </div>
+                        </div>
+                        <div class="project-highlights">
+                            <h4>Key Findings</h4>
+                            <ul>
+                                <li>81% of participants agreed SMAP is an effective community-health clinical opportunity</li>
+                                <li>Significant increase in understanding interprofessional collaboration</li>
+                                <li>Enhanced knowledge of the courses taken by and training requirements of other health professionals</li>
+                                <li>Improved patient/client satisfaction when care is delivered by an interprofessional team</li>
+                                <li>Healthcare costs are reduced when patients/clients are treated by an interprofessional team</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Research Impact Section -->
+            <div class="publications-section">
+                <h3 class="publications-title">Research Impact & Future Directions</h3>
+                <div class="publication-list">
+                    <article class="publication-item">
+                        <span class="publication-year">Next Steps</span>
+                        <div class="publication-content">
+                            <h4>Noise Reduction Project</h4>
+                            <p class="publication-authors">Engineering Design Team</p>
+                            <p class="publication-journal">
+                                Future improvements include: running more tests to limit data anomalies, designing full-length 
+                                fence panels to target a larger array of frequencies, determining how the product would be mass 
+                                produced and assembled, and designing panels so they can be attached to any size fence or stand 
+                                alone while still ensuring sound dampening.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="publication-item">
+                        <span class="publication-year">Impact</span>
+                        <div class="publication-content">
+                            <h4>Interprofessional Education Program</h4>
+                            <p class="publication-authors">SHRS Programs Collaboration</p>
+                            <p class="publication-journal">
+                                Participants believed that working with students from different health disciplines positively supplements 
+                                their education, enhances their ability to work with an interprofessional team, and increases their 
+                                knowledge of other team members' roles. This model successfully increased the diversity and sustainability 
+                                of IPE experiences by transforming extra-curricular street medicine volunteering into curriculum-based 
+                                clinical opportunities.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Articles Section -->
+    <section id="articles" class="tab-content">
+        <div class="container">
+            <div class="section-header">
+                <h2>Street Med in the Spotlight</h2>
+                <p class="section-description">
+                    Read about our impact, student experiences, and the difference we're making in Pittsburgh's communities 
+                    through local and national media coverage.
+                </p>
+            </div>
+
+            <!-- Featured Articles Grid -->
+            <div class="articles-grid">
+                <!-- Large Featured Article -->
+                <article class="article-card featured">
+                    <div class="article-image">
+                        <img src="Content/Project_articles/News/d2a3ad6f785979fec0fb6d94473ad241.jpg" alt="Street Medicine at Pitt students">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-source">Pitt Med Magazine</span>
+                        <h3><a href="https://www.pittmed.pitt.edu/news/street-medicine-at-pitt-student-group-unhoused-care" target="_blank">
+                            Street Medicine at Pitt serves Pittsburghers without homes — and educates future medical professionals
+                        </a></h3>
+                        <p class="article-excerpt">
+                            An in-depth look at how our student-run organization is transforming healthcare delivery for 
+                            Pittsburgh's unhoused population while training the next generation of compassionate healthcare providers.
+                        </p>
+                        <div class="article-meta">
+                            <span class="article-date">Featured Story</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Regular Article Cards -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="Content/Project_articles/News/1d8e654727e150311b31be3630cf9137.jpg" alt="Street Medicine volunteers">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-source">The Pitt News</span>
+                        <h3><a href="https://pittnews.com/article/170559/news/we-go-where-they-are-street-medicine-at-pitt-provides-care-to-homeless-people/" target="_blank">
+                            'We go where they are': Street Medicine at Pitt provides care to homeless people
+                        </a></h3>
+                        <p class="article-excerpt">
+                            Coverage of our weekly street rounds and the philosophy behind meeting patients where they are.
+                        </p>
+                        <div class="article-meta">
+                            <span class="article-date">Campus News</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="Content/Project_articles/News/0e12bd8c18d31c5b6def6a222ff58803.jpg" alt="Street Medicine team">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-source">Pitt Med Magazine</span>
+                        <h3><a href="https://www.pittmed.pitt.edu/news/street-medicine-at-pitt-student-group-unhoused-care" target="_blank">
+                            Outside influences - Healing happens through connection
+                        </a></h3>
+                        <p class="article-excerpt">
+                            Exploring the human connections at the heart of street medicine and how relationships drive healing.
+                        </p>
+                        <div class="article-meta">
+                            <span class="article-date">Feature</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Get Involved</h2>
+                <p>Interested in our research, want to collaborate, or have a story to share? We welcome partnerships with academic institutions, healthcare organizations, and media outlets.</p>
+                <div class="cta-buttons">
+                    <a href="Contact.html" class="btn btn-primary">Contact Us</a>
+                    <a href="Get Involed.html" class="btn btn-secondary">Join Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/streetmedicineatpitt/?hl=en" target="_blank" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="44" height="44">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/streetmedicineatpitt/" target="_blank" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+            </div>
+            <p>&copy; 2025 Street Medicine at Pitt. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.dataset.tab;
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                
+                    button.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
