@@ -3,7 +3,8 @@
    ================================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Timeline Animation on Scroll
+    
+    // Timeline Animation on Scroll - MATCHING OLD WORKING VERSION
     const timelineItems = document.querySelectorAll('.timeline-item');
     
     const observerOptions = {
@@ -25,8 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
         timelineObserver.observe(item);
     });
 
-    // Team Member Cards Hover Effect - FIXED
-    const teamMembers = document.querySelectorAll('.board-member, .liaison-member, .documentation-member, .volunteer-member, .education-member, .research-member, .resource-member, .events-education-member');
+    // Team Member Cards Hover Effect
+    const teamMembers = document.querySelectorAll(
+        '.board-member, .liaison-member, .resource-member, ' +
+        '.events-education-member, .research-member'
+    );
     
     teamMembers.forEach(member => {
         member.addEventListener('mouseenter', function() {
@@ -81,59 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
         sectionObserver.observe(section);
     });
 
-    // Parallax Effect for Hero Background
-    const heroBackground = document.querySelector('.about-hero .hero-background');
-    
-    if (heroBackground) {
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxSpeed = 0.5;
-            heroBackground.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-        });
-    }
-
-    // Counter Animation for Statistics (if any)
-    function animateCounter(element, start, end, duration) {
-        let startTime = null;
-        
-        const animation = (currentTime) => {
-            if (startTime === null) startTime = currentTime;
-            const timeElapsed = currentTime - startTime;
-            const progress = Math.min(timeElapsed / duration, 1);
-            
-            element.textContent = Math.floor(progress * (end - start) + start);
-            
-            if (progress < 1) {
-                window.requestAnimationFrame(animation);
-            } else {
-                element.textContent = end + (element.dataset.suffix || '');
-            }
-        };
-        
-        window.requestAnimationFrame(animation);
-    }
-
-    // Trigger counter animation when visible
-    const counters = document.querySelectorAll('.stat-number');
-    
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-                const target = entry.target;
-                const value = parseInt(target.dataset.value);
-                target.classList.add('animated');
-                animateCounter(target, 0, value, 2000);
-                counterObserver.unobserve(target);
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-    
-    counters.forEach(counter => {
-        counterObserver.observe(counter);
-    });
-
     // Apply Button Hover Effect
     const applyButton = document.querySelector('.cta-section .btn');
     
@@ -166,19 +117,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-// Add reveal animation styles dynamically
-const style = document.createElement('style');
-style.textContent = `
-    .reveal-section {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    
-    .reveal-section.revealed {
-        opacity: 1;
-        transform: translateY(0);
-    }
-`;
-document.head.appendChild(style);

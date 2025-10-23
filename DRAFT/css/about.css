@@ -274,12 +274,12 @@
     font-family: 'Lato', sans-serif;
 }
 
-/* Liaison Grid - 6 columns */
+/* Liaison Grid - FIXED FOR 5 MEMBERS */
 .liaison-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    max-width: 900px;
+    max-width: 800px;  /* Slightly reduced max-width for better proportions */
     margin: 0 auto;
 }
 
@@ -289,8 +289,8 @@
 }
 
 .liaison-member .member-image {
-    width: 120px;
-    height: 120px;
+    width: 130px;  /* Slightly increased from 120px for better visibility with 5 columns */
+    height: 130px;
     margin: 0 auto 10px;
     background: #d8dee4;
     border-radius: 8px;
@@ -425,8 +425,8 @@
 }
 
 .resource-member .member-image svg {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     color: #999;
 }
 
@@ -449,7 +449,7 @@
 .events-education-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 25px;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -482,8 +482,8 @@
 }
 
 .events-education-member .member-image svg {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     color: #999;
 }
 
@@ -733,9 +733,25 @@ footer p {
         gap: 25px;
     }
 
-    /* Liaison Grid - 3 columns on tablet */
+    /* Liaison Grid - 3 columns on tablet (UPDATED FOR 5 MEMBERS) */
     .liaison-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    /* Special handling for the last two items on tablet view */
+    @supports (display: grid) {
+        .liaison-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .liaison-member:nth-child(4) {
+            grid-column: 1 / 2;
+        }
+        
+        .liaison-member:nth-child(5) {
+            grid-column: 3 / 4;
+        }
     }
 
     /* Documentation Grid - 3 columns on tablet */
@@ -840,10 +856,13 @@ footer p {
         margin: 0 auto;
     }
 
-    /* Liaison Grid - 2 columns on mobile */
+    /* Liaison Grid - 2 columns on mobile (WORKS WELL WITH 5 MEMBERS) */
     .liaison-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
+    
+    /* The 5th member will naturally span to a new row */
 
     /* Documentation Grid - 2 columns on mobile */
     .documentation-grid {
