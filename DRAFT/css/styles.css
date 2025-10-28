@@ -285,14 +285,15 @@ h2, .section-header {
 }
 
 .btn-tertiary {
-    background: transparent;
+    background: #001f54;
     color: white;
-    border-color: white;
+    border-color: #001f54;
 }
 
+
+
 .btn-tertiary:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
+    background:  #001f54f5; }
 
 /* Stats Bar */
 .quick-stats-bar {
