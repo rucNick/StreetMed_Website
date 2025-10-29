@@ -239,6 +239,20 @@
     color: white;
 }
 
+.project-status.ongoing {
+    background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 2px 12px rgba(40, 167, 69, 0.4);
+    }
+}
+
 .project-title {
     font-family: 'Lora', serif;
     font-size: 24px;
@@ -349,6 +363,15 @@
     font-size: 16px;
 }
 
+/* Project Actions */
+.project-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 2px solid #f0f0f0;
+}
+
 .btn-outline {
     flex: 1;
     padding: 14px 24px;
@@ -361,6 +384,10 @@
     background: white;
     color: #003594;
     border: 2px solid #003594;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
 
 .btn-outline:hover {
@@ -776,6 +803,11 @@
     }
 
     .project-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-outline {
         width: 100%;
     }
 
@@ -880,6 +912,11 @@
         padding-left: 20px;
     }
 
+    .btn-outline {
+        font-size: 13px;
+        padding: 12px 18px;
+    }
+
     .publications-section {
         padding: 25px 15px;
         border-radius: 15px;
@@ -979,9 +1016,4 @@
     .project-card {
         page-break-inside: avoid;
     }
-
-
-
-
 }
-
