@@ -807,9 +807,9 @@ h2,
 
 /* Footer */
 footer {
-    background: #000;
+    background: #001f54;;
     color: white;
-    padding: 40px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -839,7 +839,7 @@ footer {
 .social-links svg {
     width: 24px;
     height: 24px;
-    color: white;
+    color: #ffffff;;
 }
 
 /* Gallery */
