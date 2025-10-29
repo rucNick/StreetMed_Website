@@ -60,12 +60,12 @@
     background: white;
 }
 
-/* Two-card container for parallel layout */
+/* Three-card container for parallel layout */
 .donation-cards-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     align-items: stretch;
 }
@@ -201,14 +201,30 @@
    RESPONSIVE STYLES
    ================================================ */
 
-/* Tablet View */
-@media (max-width: 1024px) {
+/* Large Desktop - Keep 3 columns */
+@media (max-width: 1400px) {
     .donation-cards-wrapper {
         padding: 0 20px;
     }
 }
 
-/* Mobile View */
+/* Tablet View - Switch to 2 columns */
+@media (max-width: 1024px) {
+    .donation-cards-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+    }
+    
+    /* Third card spans full width on smaller screens */
+    .donation-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 450px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+/* Mobile View - Single column */
 @media (max-width: 768px) {
     .donate-hero {
         min-height: 50vh;
@@ -230,6 +246,11 @@
         grid-template-columns: 1fr;
         gap: 30px;
         padding: 0;
+    }
+    
+    .donation-card:last-child {
+        grid-column: auto;
+        max-width: 100%;
     }
 
     .donation-content h2 {
