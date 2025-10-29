@@ -47,7 +47,7 @@
     font-size: 56px;
     font-weight: 700;
     margin: 0 0 20px 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .page-subtitle {
@@ -184,7 +184,8 @@
 .project-poster {
     width: 100%;
     height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, #001f54 0%, #003594 100%);
@@ -196,7 +197,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Changed to contain to show full poster */
+    object-fit: contain;
+    /* Changed to contain to show full poster */
     object-position: center;
     transition: transform 0.4s ease;
 }
@@ -369,8 +371,13 @@
 }
 
 /* Stagger Animation */
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.25s; }
+.project-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
 
 /* Publications Section */
 .publications-section {
@@ -664,6 +671,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -675,6 +683,7 @@
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -692,11 +701,11 @@
     .article-card.featured {
         grid-template-columns: 1fr;
     }
-    
+
     .article-card.featured .article-image {
         height: 300px;
     }
-    
+
     .articles-grid {
         grid-template-columns: 1fr;
     }
@@ -706,104 +715,105 @@
     .hero-section {
         min-height: 50vh;
     }
-    
+
     .page-title {
         font-size: 42px;
     }
-    
+
     .page-subtitle {
         font-size: 18px;
     }
-    
+
     .hero-content {
         padding: 60px 20px;
     }
-    
+
     #projects,
     #articles {
         padding: 60px 20px;
     }
-    
+
     .section-header h2 {
         font-size: 32px;
     }
-    
+
     .section-description {
         font-size: 16px;
     }
-    
+
     .tab-btn {
         font-size: 1rem;
         padding: 1rem 1.5rem;
     }
-    
+
     .projects-grid {
         gap: 30px;
         grid-template-columns: 1fr;
     }
-    
+
     .project-poster {
-        padding-bottom: 75%; /* Taller on mobile */
+        padding-bottom: 75%;
+        /* Taller on mobile */
     }
-    
+
     .project-content {
         padding: 25px;
     }
-    
+
     .project-title {
         font-size: 21px;
     }
-    
+
     .project-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
     }
-    
+
     .project-meta {
         flex-direction: column;
         gap: 12px;
     }
-    
+
     .project-actions {
         width: 100%;
     }
-    
+
     .publications-section {
         padding: 30px 20px;
     }
-    
+
     .publication-item {
         flex-direction: column;
         gap: 15px;
         padding: 20px;
     }
-    
+
     .article-content h3 {
         font-size: 18px;
     }
-    
+
     .article-card.featured .article-content h3 {
         font-size: 20px;
     }
-    
+
     .cta-section {
         padding: 80px 20px;
     }
-    
+
     .cta-content h2 {
         font-size: 32px;
     }
-    
+
     .cta-content p {
         font-size: 16px;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .btn {
         width: 100%;
         max-width: 300px;
@@ -814,103 +824,103 @@
     .page-title {
         font-size: 32px;
     }
-    
+
     .page-subtitle {
         font-size: 16px;
     }
-    
+
     .hero-content {
         padding: 40px 15px;
     }
-    
+
     #projects,
     #articles {
         padding: 40px 15px;
     }
-    
+
     .section-header {
         padding: 2rem 0 0;
     }
-    
+
     .section-header h2 {
         font-size: 28px;
     }
-    
+
     .section-description {
         font-size: 15px;
     }
-    
+
     .tab-btn {
         font-size: 0.9rem;
         padding: 0.8rem 1rem;
     }
-    
+
     .project-content {
         padding: 20px;
     }
-    
+
     .project-title {
         font-size: 19px;
     }
-    
+
     .project-description {
         font-size: 14px;
     }
-    
+
     .project-highlights {
         padding: 15px 20px;
     }
-    
+
     .project-highlights h4 {
         font-size: 16px;
     }
-    
+
     .project-highlights li {
         font-size: 13px;
         padding-left: 20px;
     }
-    
+
     .publications-section {
         padding: 25px 15px;
         border-radius: 15px;
     }
-    
+
     .publications-title {
         font-size: 24px;
     }
-    
+
     .publication-item {
         padding: 15px;
     }
-    
+
     .publication-content h4 {
         font-size: 17px;
     }
-    
+
     .article-content {
         padding: 20px;
     }
-    
+
     .article-content h3 {
         font-size: 16px;
     }
-    
+
     .article-card.featured .article-content h3 {
         font-size: 18px;
     }
-    
+
     .article-image {
         height: 200px;
     }
-    
+
     .article-card.featured .article-image {
         height: 250px;
     }
-    
+
     .cta-content h2 {
         font-size: 28px;
     }
-    
+
     .btn {
         padding: 12px 25px;
         font-size: 14px;
@@ -921,26 +931,28 @@
     .page-title {
         font-size: 28px;
     }
-    
+
     .section-header h2 {
         font-size: 24px;
     }
-    
+
     .tab-buttons {
         flex-direction: column;
     }
-    
+
     .tab-btn {
         width: 100%;
     }
-    
+
     .project-poster {
-        padding-bottom: 100%; /* Square on tiny screens */
+        padding-bottom: 100%;
+        /* Square on tiny screens */
     }
 }
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -952,18 +964,24 @@
 
 /* Print Styles */
 @media print {
+
     .hero-section,
     .tab-navigation,
     .cta-section,
     footer {
         display: none;
     }
-    
+
     .tab-content {
         display: block !important;
     }
-    
+
     .project-card {
         page-break-inside: avoid;
     }
+
+
+
+
 }
+
