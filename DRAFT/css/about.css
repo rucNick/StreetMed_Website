@@ -1,5 +1,5 @@
 /* ================================================
-   ABOUT US PAGE STYLES - COMPLETE VERSION
+   ABOUT US PAGE STYLES - UPDATED VERSION
    ================================================ */
 
 /* Hero Image Section */
@@ -275,12 +275,12 @@
     font-family: 'Lato', sans-serif;
 }
 
-/* Liaison Grid - FIXED FOR 5 MEMBERS */
+/* Liaison Grid - 5 columns */
 .liaison-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    max-width: 800px;  /* Slightly reduced max-width for better proportions */
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -290,7 +290,7 @@
 }
 
 .liaison-member .member-image {
-    width: 130px;  /* Slightly increased from 120px for better visibility with 5 columns */
+    width: 130px;
     height: 130px;
     margin: 0 auto 10px;
     background: #d8dee4;
@@ -327,63 +327,6 @@
 
 .liaison-member p {
     font-size: 12px;
-    color: #666;
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-}
-
-/* Documentation Grid - 5 columns */
-.documentation-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 25px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.documentation-member {
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.documentation-member .member-image {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 12px;
-    background: #d8dee4;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.documentation-member .member-image.placeholder {
-    background: #e0e0e0;
-}
-
-.documentation-member .member-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.documentation-member .member-image svg {
-    width: 60px;
-    height: 60px;
-    color: #999;
-}
-
-.documentation-member h3 {
-    font-size: 15px;
-    font-weight: 600;
-    color: #333;
-    margin: 0 0 3px 0;
-    font-family: 'Lato', sans-serif;
-}
-
-.documentation-member p {
-    font-size: 13px;
     color: #666;
     margin: 0;
     font-family: 'Lato', sans-serif;
@@ -554,6 +497,52 @@
 }
 
 .research-member p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* ================================================
+   NAMES ONLY LIST 
+   ================================================ */
+
+.names-only-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.name-item {
+    text-align: center;
+    padding: 12px 20px;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.name-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-color: #003594;
+    background: white;
+}
+
+.name-item h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #001f54;
+    margin: 0 0 3px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.name-item p {
     font-size: 13px;
     color: #666;
     margin: 0;
@@ -734,36 +723,10 @@ footer p {
         gap: 25px;
     }
 
-    /* Liaison Grid - 3 columns on tablet (UPDATED FOR 5 MEMBERS) */
+    /* Liaison Grid - 3 columns on tablet */
     .liaison-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-    }
-    
-    /* Special handling for the last two items on tablet view */
-    @supports (display: grid) {
-        .liaison-grid {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        
-        .liaison-member:nth-child(4) {
-            grid-column: 1 / 2;
-        }
-        
-        .liaison-member:nth-child(5) {
-            grid-column: 3 / 4;
-        }
-    }
-
-    /* Documentation Grid - 3 columns on tablet */
-    .documentation-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-    
-    .documentation-member .member-image {
-        width: 120px;
-        height: 120px;
     }
 
     /* Resource Grid - 2 columns on tablet */
@@ -783,10 +746,15 @@ footer p {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
+
+    /* Names Only List - still flex on tablet */
+    .names-only-list {
+        gap: 8px;
+    }
     
-    .research-member .member-image {
-        width: 120px;
-        height: 120px;
+    .name-item {
+        min-width: 160px;
+        padding: 10px 16px;
     }
 
     .schools-grid {
@@ -857,28 +825,10 @@ footer p {
         margin: 0 auto;
     }
 
-    /* Liaison Grid - 2 columns on mobile (WORKS WELL WITH 5 MEMBERS) */
+    /* Liaison Grid - 2 columns on mobile */
     .liaison-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-    }
-    
-    /* The 5th member will naturally span to a new row */
-
-    /* Documentation Grid - 2 columns on mobile */
-    .documentation-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    
-    .documentation-member .member-image {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .documentation-member .member-image svg {
-        width: 45px;
-        height: 45px;
     }
 
     /* Resource Grid - 2 columns on mobile */
@@ -892,11 +842,6 @@ footer p {
         height: 100px;
     }
 
-    .resource-member .member-image svg {
-        width: 45px;
-        height: 45px;
-    }
-
     /* Events & Education Grid - 2 columns on mobile */
     .events-education-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -907,26 +852,36 @@ footer p {
         width: 100px;
         height: 100px;
     }
-    
-    .events-education-member .member-image svg {
-        width: 45px;
-        height: 45px;
-    }
 
     /* Research Grid - 2 columns on mobile */
     .research-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
-    
+
     .research-member .member-image {
         width: 100px;
         height: 100px;
     }
+
+    /* Names Only List - smaller on mobile */
+    .names-only-list {
+        gap: 6px;
+        padding: 10px;
+    }
     
-    .research-member .member-image svg {
-        width: 45px;
-        height: 45px;
+    .name-item {
+        min-width: 140px;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .name-item h3 {
+        font-size: 13px;
+    }
+    
+    .name-item p {
+        font-size: 11px;
     }
 
     .board-member .member-image {
