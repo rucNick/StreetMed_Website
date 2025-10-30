@@ -43,7 +43,7 @@
 }
 
 .resources-hero .page-title {
-    font-family: 'Lora', serif;
+    font-family: 'Lato', serif;
     font-size: 56px;
     font-weight: 700;
     color: white;
@@ -60,7 +60,7 @@
 
 /* Section Title */
 .section-title {
-    font-family: 'Lora', serif;
+    font-family: 'Lato', serif;
     font-size: 36px;
     font-weight: 700;
     color: #001f54;
@@ -166,7 +166,7 @@
 }
 
 .resource-card h3 {
-    font-family: 'Lora', serif;
+    font-family: 'Lato', serif;
     font-size: 24px;
     font-weight: 700;
     color: #001f54;
@@ -308,7 +308,7 @@
 }
 
 .additional-card h3 {
-    font-family: 'Lora', serif;
+    font-family: 'Lato', serif;
     font-size: 20px;
     font-weight: 700;
     color: #001f54;

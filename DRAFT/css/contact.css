@@ -75,7 +75,7 @@
 /* Simple Form Styles */
 #email-signup-form h2 {
     text-align: center;
-    font-family: 'Lora', serif;
+    font-family: 'Lato', serif;
     font-size: 32px;
     color: #001f54;
     margin-bottom: 30px;
@@ -129,7 +129,7 @@
 }
 
 .contact-info h2 {
-    font-family: 'Lora', serif;
+    font-family: 'Lato', serif;
     font-size: 36px;
     font-weight: 700;
     text-align: center;
@@ -158,7 +158,7 @@
 }
 
 .contact-card h3 {
-    font-family: 'Lora', serif;
+    font-family: 'Lato', serif;
     font-size: 24px;
     font-weight: 700;
     color: #001f54;
