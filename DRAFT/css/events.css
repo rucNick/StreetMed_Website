@@ -230,6 +230,10 @@
 }
 
 .legend-dot.workshop {
+    background: #d63384;
+}
+
+.legend-dot.journal-club {
     background: #007bff;
 }
 
@@ -321,6 +325,11 @@
 }
 
 .event-category.workshop {
+    background: #ffe7e7;
+    color: #d63384;
+}
+
+.event-category.journal-club {
     background: #e7f3ff;
     color: #007bff;
 }
