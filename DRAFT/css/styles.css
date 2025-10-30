@@ -3,6 +3,12 @@
    ================================================ */
 
 /* Base */
+
+:root {
+    --font-serif: 'Lora', serif;
+    --font-sans: 'Lato', Arial, sans-serif;
+}
+
 body {
     font-family: 'Lato', Arial, sans-serif;
     background: #f8f8f8;
@@ -65,6 +71,10 @@ body {
 .hero-title {
     line-height: 0.96;
     margin-bottom: 10px;
+    font-family: 'Lato', serif;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+    
+    
 }
 
 .hero-subtitle {
@@ -73,14 +83,16 @@ body {
 }
 
 .hero-description {
-    font-family: 'Lora', serif;
-    font-weight: 500;
+    font-family: 'Lato', serif;
+    font-weight: bold;
     font-size: 18px;
     line-height: 1.38;
     max-width: 800px;
     margin-bottom: 60px;
     text-align: left;
     color: white;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+
 }
 
 /* Animations */
@@ -807,7 +819,8 @@ h2,
 
 /* Footer */
 footer {
-    background: #001f54;;
+    background: #001f54;
+    ;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -839,7 +852,8 @@ footer {
 .social-links svg {
     width: 24px;
     height: 24px;
-    color: #ffffff;;
+    color: #ffffff;
+    ;
 }
 
 /* Gallery */
