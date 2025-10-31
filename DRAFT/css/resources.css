@@ -103,6 +103,7 @@
     align-items: center;
     gap: 5px;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 .tab-button:hover {
@@ -173,6 +174,13 @@
     margin: 0 0 20px 0;
 }
 
+.resource-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+    margin: 15px 0;
+}
+
 .resource-list {
     list-style: none;
     padding: 0;
@@ -213,6 +221,122 @@
 
 .resource-details a:hover {
     text-decoration: underline;
+}
+/* BigBurgh Styles */
+.bigburgh-info-banner {
+    margin-top: 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 2px solid #003594;
+    overflow: hidden;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    gap: 30px;
+}
+
+.banner-icon {
+    font-size: 48px;
+    flex-shrink: 0;
+}
+
+.banner-text {
+    flex: 1;
+}
+
+.banner-text h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #001f54;
+    margin: 0 0 8px 0;
+}
+
+.banner-text p {
+    font-size: 15px;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.banner-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #003594;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 53, 148, 0.3);
+}
+
+.banner-button:hover {
+    background: #001f54;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 53, 148, 0.4);
+}
+
+/* Mobile responsiveness for BigBurgh */
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+        gap: 20px;
+    }
+    
+    .banner-icon {
+        font-size: 40px;
+    }
+    
+    .banner-text h4 {
+        font-size: 20px;
+    }
+    
+    .banner-text p {
+        font-size: 14px;
+    }
+    
+    .banner-button {
+        width: 100%;
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bigburgh-info-banner {
+        margin-top: 30px;
+    }
+    
+    .banner-content {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    
+    .banner-icon {
+        font-size: 36px;
+    }
+    
+    .banner-text h4 {
+        font-size: 18px;
+    }
+    
+    .banner-text p {
+        font-size: 13px;
+    }
+    
+    .banner-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }
 
 /* Shelter & Drop-in Info Images */
@@ -357,167 +481,4 @@
         grid-template-columns: 1fr;
     }
     
-    .additional-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-}
-
-/* Mobile View */
-@media (max-width: 768px) {
-    /* Hero adjustments */
-    .resources-hero {
-        min-height: 50vh;
-    }
-    
-    .resources-hero .page-title {
-        font-size: 42px;
-    }
-    
-    .resources-hero .page-subtitle {
-        font-size: 18px;
-    }
-    
-    .resources-hero .hero-content {
-        padding: 60px 20px;
-    }
-    
-    /* Tab navigation mobile */
-    .resource-tabs {
-        padding: 10px 0;
-        top: 60px;
-    }
-    
-    .tab-navigation {
-        gap: 5px;
-        padding: 0 10px;
-    }
-    
-    .tab-button {
-        font-size: 12px;
-        padding: 7px 10px;
-        border-radius: 20px;
-    }
-    
-    .tab-button .emoji {
-        font-size: 14px;
-    }
-    
-    /* Content sections */
-    .section-title {
-        font-size: 28px;
-        margin-bottom: 30px;
-    }
-    
-    .resource-card {
-        padding: 25px;
-    }
-    
-    .resource-card h3 {
-        font-size: 20px;
-    }
-    
-    .resource-list li {
-        padding: 12px 0;
-    }
-    
-    /* Images mobile */
-    .shelter-info-cards,
-    .dropin-info-cards {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Filter buttons mobile */
-    .filter-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .filter-btn {
-        width: 80%;
-        max-width: 250px;
-    }
-    
-    /* Additional cards */
-    .additional-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .additional-card {
-        padding: 20px;
-    }
-    
-    .additional-card h3 {
-        font-size: 18px;
-    }
-}
-
-/* Small Mobile View */
-@media (max-width: 480px) {
-    .resources-hero .page-title {
-        font-size: 32px;
-    }
-    
-    .resources-hero .page-subtitle {
-        font-size: 16px;
-    }
-    
-    .resources-hero .hero-content {
-        padding: 40px 15px;
-    }
-    
-    /* Tab navigation very small */
-    .tab-navigation {
-        gap: 3px;
-        padding: 0 5px;
-    }
-    
-    .tab-button {
-        font-size: 11px;
-        padding: 6px 8px;
-    }
-    
-    /* Hide text, keep emoji on very small screens */
-    .tab-button .text {
-        display: none;
-    }
-    
-    .tab-button .emoji {
-        font-size: 16px;
-    }
-    
-    /* Content adjustments */
-    .section-title {
-        font-size: 24px;
-    }
-    
-    .resource-card {
-        padding: 20px;
-    }
-    
-    .resource-card h3 {
-        font-size: 18px;
-    }
-    
-    .resource-list strong {
-        font-size: 15px;
-    }
-    
-    .resource-details {
-        font-size: 13px;
-    }
-    
-    .info-card-img {
-        border-radius: 8px;
-    }
-}
-
-/* Very Small Mobile */
-@media (max-width: 360px) {
-    .resources-hero .page-title {
-        font-size: 28px;
-    }
-    
-    .resource-cards {
-        grid-template-columns: 1fr;
-    }
-}
+    .addit
