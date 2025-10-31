@@ -341,6 +341,13 @@
     margin: 0 auto;
 }
 
+/* Center resource grid when it has 3 members (for Communications section) */
+.resource-grid:has(.resource-member:nth-child(3):last-child) {
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 675px;
+}
+
 .resource-member {
     text-align: center;
     transition: transform 0.3s ease;
