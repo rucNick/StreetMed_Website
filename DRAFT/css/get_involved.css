@@ -18,7 +18,7 @@
 .street-rounds-hero .hero-background {
     position: absolute;
     inset: 0;
-    background-image: url('../Street Rounds/Bridge.jpg');
+    background-image: url('../Content/Street Rounds/Bridge.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.3;
