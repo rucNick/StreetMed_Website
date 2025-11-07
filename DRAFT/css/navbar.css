@@ -24,7 +24,7 @@
     padding: 0 20px;
 }
 
-/* Logo with Image */
+/* Logo with Image - Improved Responsive */
 .logo {
     color: #f9f9f9;
     font-family: 'Lato', serif;
@@ -36,6 +36,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    min-width: 0; /* Allow flex shrinking */
 }
 
 .logo-image {
@@ -44,10 +45,23 @@
     object-fit: contain;
     background: transparent;
     mix-blend-mode: normal;
+    flex-shrink: 0; /* Don't shrink the logo image */
 }
 
 .logo-text {
     display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Logo text variants for different screen sizes */
+.logo-short {
+    display: none;
+}
+
+.logo-full {
+    display: inline;
 }
 
 .logo:hover {
@@ -62,7 +76,6 @@
     padding: 0;
     gap: 15px;
     align-items: center;
-    
 }
 
 #navMenu > li {
@@ -75,7 +88,6 @@
     padding: 10px 12px;
     display: inline-block;
     font-size: 15px;
-    
     transition: all 0.3s ease;
     white-space: nowrap;
     font-weight: 500;
@@ -133,7 +145,6 @@
     padding-left: 25px;
 }
 
-
 /* Mobile Overlay */
 .mobile-nav-overlay {
     display: none;
@@ -151,13 +162,62 @@
 }
 
 /* ================================================
+   TABLET AND MEDIUM ZOOM LEVELS
+   ================================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logo {
+        font-size: 18px;
+        gap: 10px;
+    }
+    
+    .logo-image {
+        height: 36px;
+    }
+    
+    #navMenu {
+        gap: 10px;
+    }
+    
+    #navMenu > li > a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Handle tighter zoom levels on desktop */
+@media (min-width: 769px) and (max-width: 900px) {
+    .logo {
+        font-size: 16px;
+    }
+    
+    .logo-image {
+        height: 34px;
+    }
+    
+    #navMenu {
+        gap: 8px;
+    }
+    
+    #navMenu > li > a {
+        padding: 8px 8px;
+        font-size: 13px;
+    }
+}
+
+/* ================================================
    MOBILE STYLES
    ================================================ */
 @media only screen and (max-width: 768px) {
+    .nav-container {
+        padding: 0 15px; /* Reduce padding for more space */
+    }
+    
     /* Logo adjustments for mobile */
     .logo {
         font-size: 16px;
         gap: 8px;
+        max-width: calc(100% - 50px); /* Leave space for hamburger */
+        min-width: 0;
     }
     
     .logo-image {
@@ -165,9 +225,9 @@
     }
     
     .logo-text {
-        max-width: 150px;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        max-width: none;
+        overflow: visible;
+        white-space: nowrap;
     }
     
     /* Show hamburger menu */
@@ -180,6 +240,7 @@
         padding: 5px;
         cursor: pointer;
         z-index: 999999;
+        flex-shrink: 0;
     }
     
     #menuToggle span {
@@ -319,19 +380,29 @@
     }
 }
 
-/* Small screens */
+/* Small screens - use shorter text */
 @media only screen and (max-width: 480px) {
+    .nav-container {
+        padding: 0 12px;
+    }
+    
     .logo {
         font-size: 14px;
         gap: 6px;
+        max-width: calc(100% - 45px);
     }
     
     .logo-image {
         height: 28px;
     }
     
-    .logo-text {
-        max-width: 120px;
+    /* Switch to shorter text */
+    .logo-full {
+        display: none;
+    }
+    
+    .logo-short {
+        display: inline;
     }
     
     #navMenu {
@@ -349,22 +420,47 @@
     }
 }
 
-/* Tablet screens */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* Very small screens - additional adjustments */
+@media only screen and (max-width: 380px) {
+    .nav-container {
+        padding: 0 10px;
+    }
+    
     .logo {
-        font-size: 18px;
+        font-size: 13px;
+        gap: 5px;
+        max-width: calc(100% - 40px);
     }
     
     .logo-image {
-        height: 36px;
+        height: 26px;
+    }
+    
+    #menuToggle {
+        padding: 3px;
+    }
+    
+    #menuToggle span {
+        width: 22px;
     }
     
     #navMenu {
-        gap: 10px;
+        width: 230px;
+    }
+}
+
+/* Extra small screens */
+@media only screen and (max-width: 320px) {
+    .logo {
+        font-size: 12px;
+        gap: 4px;
     }
     
-    #navMenu > li > a {
-        padding: 8px 10px;
-        font-size: 14px;
+    .logo-image {
+        height: 24px;
+    }
+    
+    #navMenu {
+        width: 220px;
     }
 }
