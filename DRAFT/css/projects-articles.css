@@ -490,6 +490,23 @@
     color: #28a745;
 }
 
+/* Red styling for next-steps publications */
+.publication-item:has(.publication-year.next-steps) {
+    border-left-color: #dc3545;
+}
+
+.publication-item:has(.publication-year.next-steps):hover {
+    border-left-color: #dc3545;
+}
+
+.publication-year.next-steps {
+    color: #dc3545;
+}
+
+.publication-item:has(.publication-year.next-steps) .publication-content h4 {
+    color: #dc3545;
+}
+
 .publication-content h4 {
     font-family: 'Lato', serif;
     font-size: 19px;
