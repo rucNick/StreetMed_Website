@@ -965,3 +965,213 @@ footer {
 .sponsors .donate-section p {
     margin: 0 0 1.5rem;
 }
+
+/* Expanded Stats Grid for Home Page */
+.stats-grid-expanded {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+/* Responsive adjustments for expanded stats */
+@media (max-width: 1200px) {
+    .stats-grid-expanded {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid-expanded {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .stat-value {
+        font-size: 28px;
+    }
+    
+    .stat-label {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid-expanded {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+
+/* Expanded Stats Grid for Home Page */
+.stats-grid-expanded {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+/* ================================================
+   COURSE CREDIT CALLOUT (Homepage Version)
+   ================================================ */
+
+.course-credit-callout {
+    background: linear-gradient(135deg, #FFB81C 0%, #f0a500 100%);
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin: 0 auto 50px;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 8px 24px rgba(255, 184, 28, 0.35);
+    animation: fadeIn 0.8s ease;
+    border: 2px solid rgba(0, 31, 84, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background pattern */
+.course-credit-callout::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.credit-callout-icon {
+    width: 48px;
+    height: 48px;
+    stroke: #001f54;
+    stroke-width: 2.5;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.course-credit-callout p {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #001f54;
+    position: relative;
+    z-index: 1;
+}
+
+.course-credit-callout strong {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Hover effect */
+.course-credit-callout:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(255, 184, 28, 0.45);
+    transition: all 0.3s ease;
+}
+
+/* ================================================
+   RESPONSIVE STYLES
+   ================================================ */
+
+/* Tablet adjustments */
+@media (max-width: 1200px) {
+    .stats-grid-expanded {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .course-credit-callout {
+        padding: 22px 28px;
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid-expanded {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .stat-value {
+        font-size: 28px;
+    }
+    
+    .stat-label {
+        font-size: 12px;
+    }
+    
+    /* Course credit callout responsive */
+    .course-credit-callout {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+    
+    .credit-callout-icon {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .course-credit-callout p {
+        font-size: 16px;
+    }
+    
+    .course-credit-callout strong {
+        font-size: 17px;
+        display: block;
+        margin-bottom: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid-expanded {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .course-credit-callout {
+        padding: 20px 16px;
+        border-radius: 12px;
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+    
+    .credit-callout-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .course-credit-callout p {
+        font-size: 15px;
+    }
+    
+    .course-credit-callout strong {
+        font-size: 16px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 380px) {
+    .course-credit-callout {
+        padding: 18px 14px;
+    }
+    
+    .course-credit-callout p {
+        font-size: 14px;
+    }
+    
+    .credit-callout-icon {
+        width: 32px;
+        height: 32px;
+    }
+}
