@@ -1440,7 +1440,7 @@ footer {
 
     .mission-columns {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        gap: 12px;
     }
 
     .mission-column {
@@ -1469,7 +1469,7 @@ footer {
 
 
     .mission-section .section-header {
-        font-size: clamp(18px, 4.2vw, 28px);
+        font-size: clamp(20px, 4.2vw, 28px);
         line-height: 1.15;
         margin: 20px 0 10px;
     }
@@ -1486,6 +1486,9 @@ footer {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
         gap: 16px !important;
     }
+
+
+    
 
 }
 
@@ -1514,7 +1517,7 @@ footer {
     }
 
     .mission-column p {
-        font-size: 13px;
+        font-size: 333px;
     }
 
     .about-page .mission-columns,
