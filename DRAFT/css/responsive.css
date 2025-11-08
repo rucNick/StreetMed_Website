@@ -1,6 +1,15 @@
 /* ================================================
-   RESPONSIVE STYLES - REFINED VERSION
+   RESPONSIVE STYLES - CLEANED AND ORGANIZED
    ================================================ */
+
+/* ===================================
+   Desktop/Large Screens (1025px+)
+   =================================== */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 1400px;
+    }
+}
 
 /* ===================================
    Tablet View (769px - 1024px)
@@ -21,6 +30,38 @@
     
     .mission-columns {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===================================
+   Stats Grid Responsive
+   =================================== */
+@media (max-width: 1200px) {
+    .stats-grid-expanded {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid-expanded {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .stat-value {
+        font-size: 28px;
+    }
+    
+    .stat-label {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid-expanded {
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 }
 
@@ -117,6 +158,33 @@
         font-size: 18px;
         padding: 15px;
     }
+    
+    /* Course Credit Callout */
+    .course-credit-callout {
+        flex-direction: column;
+        text-align: center;
+        padding: 26px 22px;
+        gap: 18px;
+        margin: 40px auto 40px;
+        border-width: 2px;
+    }
+    
+    .credit-callout-icon {
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+    }
+    
+    .course-credit-callout p {
+        font-size: 16.5px;
+        line-height: 1.6;
+    }
+    
+    .course-credit-callout strong {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 6px;
+    }
 }
 
 /* ===================================
@@ -195,6 +263,28 @@
         font-size: 16px;
         padding: 12px;
     }
+    
+    /* Course Credit Callout */
+    .course-credit-callout {
+        padding: 22px 18px;
+        border-radius: 16px;
+        gap: 14px;
+        margin: 35px auto 35px;
+    }
+    
+    .credit-callout-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+    
+    .course-credit-callout p {
+        font-size: 15.5px;
+    }
+    
+    .course-credit-callout strong {
+        font-size: 17px;
+    }
 }
 
 /* ===================================
@@ -221,6 +311,28 @@
 
     .impact-number {
         font-size: 28px;
+    }
+    
+    /* Course Credit Callout */
+    .course-credit-callout {
+        padding: 20px 16px;
+        border-radius: 14px;
+        gap: 12px;
+        margin: 30px auto 30px;
+    }
+    
+    .credit-callout-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+    
+    .course-credit-callout p {
+        font-size: 14.5px;
+    }
+    
+    .course-credit-callout strong {
+        font-size: 16px;
     }
 }
 
@@ -253,6 +365,20 @@
 
     .stats-grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Course Credit Callout - Landscape */
+    .course-credit-callout {
+        flex-direction: row;
+        text-align: left;
+        padding: 24px 28px;
+        gap: 20px;
+        margin: 40px auto 40px;
+    }
+    
+    .course-credit-callout strong {
+        display: inline;
+        margin-bottom: 0;
     }
 }
 
@@ -321,6 +447,13 @@
         page-break-after: auto;
         page-break-inside: avoid;
     }
+    
+    /* Course Credit Callout - Print */
+    .course-credit-callout {
+        border: 2px solid #000;
+        box-shadow: none;
+        background: #f0f0f0;
+    }
 }
 
 /* ===================================
@@ -355,6 +488,11 @@
     html {
         scroll-behavior: auto;
     }
+    
+    /* Course Credit Callout - No Hover */
+    .course-credit-callout:hover {
+        transform: none;
+    }
 }
 
 /* ===================================
@@ -369,7 +507,8 @@
     .service-card,
     .impact-card,
     .involvement-card,
-    .news-card {
+    .news-card,
+    .course-credit-callout {
         border: 2px solid currentColor;
     }
 
@@ -379,8 +518,8 @@
 }
 
 /* ===================================
-   Dark Mode Support (if needed in future)
+   Dark Mode Support (Optional)
    =================================== */
 @media (prefers-color-scheme: dark) {
-    /* Dark mode styles can be added here if needed */
+    /* Dark mode styles can be added here if needed in the future */
 }
