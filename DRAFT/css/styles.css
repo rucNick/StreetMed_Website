@@ -1312,17 +1312,7 @@ footer {
 }
 
 /* Super small devices */
-@media (max-width: 380px) {
-    .two-col-photos {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-    }
-
-    .photos-right-grid {
-        grid-auto-rows: clamp(50px, 18vw, 76px);
-        gap: 6px;
-    }
-}
+@media (max-width: 380px) {}
 
 
 
@@ -1342,7 +1332,7 @@ footer {
 
 
 /* Force 3-up metrics on small screens and shrink contents */
-@media (max-width: 940px) {
+@media (max-width: 740px) {
     .metrics-container {
         display: grid !important;
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -1392,4 +1382,159 @@ footer {
         /* keep on one line */
         border-radius: 12px !important;
     }
+
+    /* metrics bar */
+    .quick-stats-bar {
+        padding: 18px 0;
+    }
+
+    .stats-grid-expanded {
+        display: grid !important;
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .stat-value {
+        font-size: 10px !important;
+    }
+
+    .stat-label {
+        font-size: 6px !important;
+        letter-spacing: .3px;
+        white-space: nowrap;
+    }
+
+
+    .two-col-photos {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .two-col-photos {
+        grid-template-columns: 1fr !important;
+        /* 1 column */
+        align-items: start;
+        gap: 16px;
+        /* tighter gap when stacked */
+    }
+
+    /* Order control (text first, images second) */
+    .two-col-photos .photos-text {
+        order: 1;
+    }
+
+    .two-col-photos .photos-right-grid {
+        order: 2;
+    }
+
+
+    /* Optional: let the image grid breathe a bit when stacked */
+    .photos-right-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* keep 2-up */
+        grid-auto-rows: 90px;
+        /* was 110px */
+        gap: 8px;
+    }
+
+
+    .mission-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .mission-column {
+        padding: 18px;
+    }
+
+    .mission-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mission-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .mission-column h3 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .mission-column p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+
+    .mission-section .section-header {
+        font-size: clamp(18px, 4.2vw, 28px);
+        line-height: 1.15;
+        margin: 20px 0 10px;
+    }
+
+    .mission-section .section-underline {
+        width: 40px;
+        height: 3px;
+        margin: 0 auto 16px;
+    }
+
+    .about-page .mission-columns,
+    .mission-section .mission-columns,
+    .mission-columns {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .mission-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .mission-column {
+        padding: 14px;
+    }
+
+    .mission-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .mission-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .mission-column h3 {
+        font-size: 16px;
+    }
+
+    .mission-column p {
+        font-size: 13px;
+    }
+
+    .about-page .mission-columns,
+    .mission-section .mission-columns,
+    .mission-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+
+    .mission-column {
+        min-width: 0;
+    }
+}
+
+
+.about-page .mission-columns,
+.mission-section .mission-columns,
+.mission-columns {
+    display: grid !important;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
 }
