@@ -125,6 +125,7 @@ body {
 }
 
 @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -915,6 +916,7 @@ footer {
 }
 
 @keyframes fade {
+
     0%,
     25%,
     100% {
@@ -978,7 +980,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 24px;
-    box-shadow: 
+    box-shadow:
         0 10px 30px rgba(255, 184, 28, 0.25),
         0 4px 12px rgba(255, 165, 0, 0.2);
     position: relative;
@@ -1044,7 +1046,7 @@ footer {
 /* Hover effect */
 .course-credit-callout:hover {
     transform: translateY(-4px);
-    box-shadow: 
+    box-shadow:
         0 14px 38px rgba(255, 184, 28, 0.32),
         0 6px 16px rgba(255, 165, 0, 0.25);
     border-color: rgba(255, 255, 255, 0.8);
@@ -1222,42 +1224,106 @@ footer {
     backdrop-filter: blur(2px);
 }
 
-/* Responsive */
+/* Keep two columns on small screens, just tighter */
 @media (max-width: 1100px) {
+    .container {
+        padding: 0 14px;
+    }
+
     .two-col-photos {
-        grid-template-columns: 1fr;
+        grid-template-columns: 0.9fr 1.1fr;
+        /* still side-by-side */
+        gap: 18px;
     }
 
-    .photos-right-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 140px;
-    }
-
-    .photos-right-grid .tile-tall {
-        grid-column: span 2;
-        /* full width on tablet */
-    }
-}
-
-@media (max-width: 640px) {
-    .what-we-do-photos {
-        padding: 44px 0;
-    }
-
-    .photos-right-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 110px;
-        gap: 10px;
-    }
-
-    .photos-right-grid .tile-tall {
-        grid-column: span 2;
+    /* Shrink typography nicely */
+    .photos-text .section-header {
+        font-size: clamp(24px, 6vw, 36px);
     }
 
     .photos-text .lead {
-        font-size: 16px;
+        font-size: clamp(14px, 3.6vw, 16px);
+    }
+
+    .photos-text .bullets {
+        font-size: clamp(13px, 3.3vw, 15px);
+    }
+
+    .photos-text .section-underline {
+        width: 56px;
+        height: 3px;
+        margin-bottom: 12px;
+    }
+
+    /* Keep 3 columns of images; shrink rows */
+    .photos-right-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: clamp(70px, 14vw, 110px);
+        gap: 10px;
+        margin-top: clamp(10px, 2vw, 18px);
+        /* your “push down” */
+    }
+
+    .photos-right-grid .tile {
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+    }
+
+    .photos-right-grid .tile figcaption {
+        font-size: 11px;
+        padding: 4px 8px;
+        left: 8px;
+        bottom: 8px;
     }
 }
+
+/* Phone-specific tightening but STILL side-by-side */
+@media (max-width: 640px) {
+    .two-col-photos {
+        grid-template-columns: 1fr 1.1fr;
+        /* keep two columns */
+        gap: 12px;
+    }
+
+    .photos-right-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: clamp(58px, 16vw, 90px);
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+        border-width: 2px;
+    }
+
+    .metrics-container {
+        gap: 14px;
+    }
+
+    .metric-number {
+        font-size: clamp(26px, 7.5vw, 34px);
+    }
+
+    .metric-label {
+        font-size: 12px;
+    }
+}
+
+/* Super small devices */
+@media (max-width: 380px) {
+    .two-col-photos {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .photos-right-grid {
+        grid-auto-rows: clamp(50px, 18vw, 76px);
+        gap: 6px;
+    }
+}
+
 
 
 /* adjusts the horizontal position of the pictures on the homepage  */
@@ -1271,4 +1337,59 @@ footer {
 
 .photos-right-grid img.bottomMiddlePhoto {
     object-position: center 60%;
+}
+
+
+
+/* Force 3-up metrics on small screens and shrink contents */
+@media (max-width: 940px) {
+    .metrics-container {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+        margin: 20px 0 !important;
+    }
+
+    .metric-card {
+        padding: 12px 10px !important;
+        border-radius: 12px !important;
+    }
+
+    .metric-icon svg {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .metric-number {
+        font-size: 24px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .metric-label {
+        font-size: 11px !important;
+        letter-spacing: 0.3px !important;
+        white-space: nowrap;
+        /* keeps label on one line */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    .cta-buttons {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
+        margin-top: 18px !important;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+
+    .cta-buttons .btn {
+        padding: 10px 8px !important;
+        font-size: 8px !important;
+        line-height: 1.1 !important;
+        white-space: nowrap;
+        /* keep on one line */
+        border-radius: 12px !important;
+    }
 }
