@@ -1458,7 +1458,7 @@ footer {
     }
 
     .mission-column h3 {
-        font-size: 11px;
+        font-size: 12px;
         margin-bottom: 10px;
     }
 
@@ -1469,7 +1469,7 @@ footer {
 
 
     .mission-section .section-header {
-        font-size: clamp(20px, 4.2vw, 28px);
+        font-size: clamp(12px, 4.2vw, 28px);
         line-height: 1.15;
         margin: 20px 0 10px;
     }
