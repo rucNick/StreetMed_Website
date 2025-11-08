@@ -1492,7 +1492,7 @@ footer {
 
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .mission-columns {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
@@ -1530,7 +1530,7 @@ footer {
     .mission-column {
         min-width: 0;
     }
-}
+} */
 
 
 .about-page .mission-columns,
