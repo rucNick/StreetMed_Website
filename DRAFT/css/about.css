@@ -936,4 +936,8 @@ footer p {
     .history-quote em {
         font-size: 16px;
     }
+    
+    .history-section h2 {
+        font-size: 12px;
+    }
 }
