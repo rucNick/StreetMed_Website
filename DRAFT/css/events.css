@@ -577,6 +577,35 @@
     font-size: 16px;
 }
 
+/* Resource Download Button */
+.event-resource-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #003594;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.event-resource-btn:hover {
+    background: #001f54;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 53, 148, 0.3);
+}
+
+.event-resource-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
 /* ===================================
    CTA Section
    =================================== */
