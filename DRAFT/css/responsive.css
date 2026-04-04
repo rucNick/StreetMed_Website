@@ -19,6 +19,10 @@
     .impact-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .announcements-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
     
     .involvement-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -26,6 +30,10 @@
     
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-section .services-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
     }
     
     .mission-columns {
@@ -61,6 +69,11 @@
 @media (max-width: 480px) {
     .stats-grid-expanded {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .announcements-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
     }
 }
@@ -116,6 +129,26 @@
     .services-grid,
     .mission-columns {
         grid-template-columns: 1fr;
+    }
+
+    .featured-section .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-section .service-card {
+        min-height: auto;
+    }
+
+    .featured-section .service-card img {
+        height: 100%;
+    }
+
+    .featured-section .featured-carousel-slide img {
+        height: 100%;
+    }
+
+    .featured-section .featured-media {
+        height: 180px;
     }
 
     .impact-grid {

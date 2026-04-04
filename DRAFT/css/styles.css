@@ -382,8 +382,127 @@ h2,
     background: #f8f9fa;
 }
 
+.featured-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background: #1a2139;
+}
+
+.featured-section + .what-we-do-section {
+    padding-top: 56px;
+}
+
 .get-involved {
     background: white;
+}
+
+.announcements-section {
+    padding: 72px 0 40px;
+    background: #ffffff;
+}
+
+.announcements-heading {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto 28px;
+}
+
+.announcements-intro {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #52606d;
+    margin: -8px auto 0;
+}
+
+.announcements-intro a {
+    color: #003594;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.announcements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 420px));
+    justify-content: center;
+    align-items: start;
+    gap: 24px;
+    margin-top: 36px;
+}
+
+.announcement-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border: 1px solid #d9e4f2;
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 10px 24px rgba(0, 31, 84, 0.06);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.announcement-media {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    background: #eef3f9;
+}
+
+.announcement-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #eef3f9;
+}
+
+.announcement-card h3 {
+    font-family: 'Lato', serif;
+    font-size: 24px;
+    color: #001f54;
+    margin: 0 0 12px;
+}
+
+.announcement-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #475569;
+    margin: 0 0 18px;
+    flex: 1;
+}
+
+.announcement-date {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #001f54;
+    color: #FFB81C;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.announcement-link {
+    color: #003594;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.announcement-button {
+    display: inline-block;
+    margin: 0 auto 14px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: #FFB81C;
+    color: #001f54;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.1;
 }
 
 /* Grid Layouts */
@@ -510,6 +629,200 @@ h2,
 
 .service-card p {
     font-size: 14px;
+}
+
+/* Featured Section Overrides */
+.featured-section .services-grid {
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    align-items: start;
+}
+
+.featured-section .service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.featured-section .featured-copy {
+    width: 100%;
+    background: transparent;
+    color: white;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-section .featured-copy h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 18px 20px 8px;
+    color: white;
+}
+
+.featured-section .featured-copy > p {
+    padding: 12px 20px 14px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.featured-section .featured-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    text-align: left;
+    flex: 1;
+}
+
+.featured-section .featured-copy.is-expanded .featured-description {
+    display: block;
+    overflow: visible;
+}
+
+.featured-section .featured-copy-full .featured-description {
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+}
+
+.featured-section .featured-description-extra {
+    display: inline;
+}
+
+.featured-section .service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.featured-section .featured-media {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+}
+
+.featured-section .featured-carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.featured-section .featured-carousel-track {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.featured-section .featured-carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.featured-section .featured-carousel-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.featured-section .featured-carousel-slide img {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.featured-section .featured-carousel-slide img.featured-image-lower {
+    object-position: center 12%;
+}
+
+.featured-section .featured-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(0, 31, 84, 0.72);
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.featured-section .featured-carousel-btn.prev {
+    left: 10px;
+}
+
+.featured-section .featured-carousel-btn.next {
+    right: 10px;
+}
+
+.featured-section .featured-carousel-btn:hover {
+    background: rgba(0, 53, 148, 0.88);
+}
+
+.featured-section .featured-carousel:hover .featured-carousel-btn,
+.featured-section .featured-carousel:focus-within .featured-carousel-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (hover: none) {
+    .featured-section .featured-carousel-btn {
+        display: none;
+    }
+}
+
+.featured-section .featured-toggle {
+    margin: 0 20px 18px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: #FFB81C;
+    font-weight: 700;
+    outline: none;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    line-height: 1.2;
+    align-self: flex-start;
+}
+
+.featured-section .section-header {
+    color: white;
+    margin-top: 0;
+}
+
+.featured-section .featured-toggle[hidden] {
+    display: none;
 }
 
 /* Impact Section */
