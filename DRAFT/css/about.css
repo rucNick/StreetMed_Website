@@ -579,6 +579,66 @@
     font-family: 'Lato', sans-serif;
 }
 
+.liaison-committee-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px 36px;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.liaison-committee-group {
+    text-align: left;
+    padding: 0;
+}
+
+.liaison-committee-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #001f54;
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #d9e4f2;
+    font-family: 'Lato', sans-serif;
+}
+
+.liaison-committee-group .names-only-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+.liaison-committee-group .name-item {
+    min-width: 0;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+}
+
+.liaison-committee-group .name-item:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: transparent;
+    background: transparent;
+}
+
+.liaison-committee-group .name-item h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.liaison-committee-group .name-item p {
+    margin-top: 2px;
+}
+
 /* ================================================
    VOLUNTEERS SECTION
    ================================================ */
